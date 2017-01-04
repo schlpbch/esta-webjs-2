@@ -8,9 +8,9 @@
  * @since 14.07.2016, 2016.
  */
 import {Component, OnInit} from '@angular/core';
-import {MessagesService} from './messages.service.ts';
-import {MessageType} from './messagetype.model.ts';
-import {IMessage} from './message.model.ts';
+import {MessagesService} from './messages.service';
+import {MessageType} from './messagetype.model';
+import {IMessage} from './message.model';
 
 @Component({
     selector: 'messages-component',

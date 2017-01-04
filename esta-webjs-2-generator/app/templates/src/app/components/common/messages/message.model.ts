@@ -7,7 +7,7 @@
  * @version: 2.0.0
  * @since 14.07.2016, 2016.
  */
-import {MessageType} from './messagetype.model.ts';
+import {MessageType} from './messagetype.model';
 export interface IMessage {
     message: string;
     type: MessageType;

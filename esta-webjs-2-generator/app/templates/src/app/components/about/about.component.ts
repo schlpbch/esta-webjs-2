@@ -8,8 +8,8 @@
  * @since 23.10.2015, 2015.
  */
 import {Component, OnInit} from '@angular/core';
-import {PostsService} from '../common/posts/posts.service.ts';
-import {MessagesService} from '../common/messages/messages.service.ts';
+import {PostsService} from '../common/posts/posts.service';
+import {MessagesService} from '../common/messages/messages.service';
 
 @Component({
     selector: 'about-component',

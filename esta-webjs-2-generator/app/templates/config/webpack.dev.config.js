@@ -1,35 +1,18 @@
 const webpack = require('webpack');
-const helpers = require('./helpers');
+const extend = require('node.extend');
 
 const sharedConfig = require('./webpack.shared.config');
-
-const AOT = helpers.hasNpmFlag('aot');
-
-// var webpack = require('webpack');
-// var extend = require('node.extend');
-// var path = require('path');
-// var browserSyncPlugin = require('browser-sync-webpack-plugin');
-// var buildPath = path.join(__dirname, 'target/build');
-// var HtmlWebpackPlugin = require('html-webpack-plugin');
-// var webjsConfig = require('./config/shared.build.config');
 
 /**
  * Development Konfigurationsdatei fuer Webpack (der Teil, der nur fuer den Development Build ist)
  */
-exports.development = extend({}, sharedConfig, {
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
-    }, plugins: [
-        new browserSyncPlugin({
-            proxy: 'localhost:3000'
-        }),
-        new HtmlWebpackPlugin({
-            template: '../index.html'
-        })
-    ], watch: true, devtool: 'source-map'
+module.exports = extend({}, sharedConfig.commonConfig, {
+    watch: true, devtool: 'source-map', devServer: {
+        port: 3000, host: 'localhost', historyApiFallback: true, watchOptions: {
+            aggregateTimeout: 300, poll: 500
+        }
+    }
 });
-
 
 // /**
 //  * Production Konfigurationsdatei fuer Webpack (der Teil, der nur fuer den produktiven Build ist)

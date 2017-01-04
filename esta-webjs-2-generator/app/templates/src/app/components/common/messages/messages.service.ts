@@ -10,8 +10,8 @@
 import {Injectable} from '@angular/core';
 import {Subject}    from 'rxjs/Subject';
 import {Router, NavigationEnd} from '@angular/router';
-import {IMessage} from './message.model.ts';
-import {MessageType} from './messagetype.model.ts';
+import {IMessage} from './message.model';
+import {MessageType} from './messagetype.model';
 
 @Injectable()
 export class MessagesService {
