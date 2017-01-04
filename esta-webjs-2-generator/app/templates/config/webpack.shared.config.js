@@ -59,7 +59,7 @@ module.exports.commonConfig = {
             },
 
             {
-                test: /\.css$/, use: ['css-loader']
+                test: /\.css$/, use: ['to-string-loader', 'css-loader']
             },
 
             {

@@ -7,7 +7,6 @@
     "serve": "webpack-dev-server --config config/webpack.dev.config.js --progress --profile --watch --content-base src/"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "@angular/common": "^2.3.1",
     "@angular/compiler": "^2.3.1",
     "@angular/core": "^2.3.1",
@@ -16,6 +15,7 @@
     "@angular/platform-browser": "^2.3.1",
     "@angular/platform-browser-dynamic": "^2.3.1",
     "@angular/router": "^3.3.1",
+    "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",

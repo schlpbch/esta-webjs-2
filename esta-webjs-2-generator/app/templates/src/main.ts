@@ -16,10 +16,6 @@ import { enableProdMode } from '@angular/core';
 import { environment } from './environments/environment';
 import { AppModule } from './app/app.module';
 
-// ESTA imports
-// FIXME: Disabled weil @angular sich nicht mit Nexus mischen laesst
-// import 'esta-webjs-style/build/css/style.css';
-
 if (environment.production) {
     enableProdMode();
 }

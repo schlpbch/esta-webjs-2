@@ -7,7 +7,7 @@
  * @version: 2.0.0
  * @since 23.10.2015, 2015.
  */
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
     selector: 'app-root',
@@ -41,11 +41,13 @@ import {Component} from '@angular/core';
         <router-outlet></router-outlet>
       `,
     styles: [
-            require('bootstrap/dist/css/bootstrap.min.css').toString(),
+        require('../../node_modules/bootstrap/dist/css/bootstrap.css').toString(),
         `
-        .topfix {
-           height: 60px;
-        }`]
+            .topfix {
+                height: 60px;
+            }
+        `],
+    encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
 }
