@@ -7,6 +7,9 @@ const sharedConfig = require('./webpack.shared.config');
  * Development Konfigurationsdatei fuer Webpack (der Teil, der nur fuer den Development Build ist)
  */
 module.exports = extend({}, sharedConfig.commonConfig, {
+    performance: {
+        hints: false
+    },
     watch: true, devtool: 'source-map', devServer: {
         port: 3000, host: 'localhost', historyApiFallback: true, watchOptions: {
             aggregateTimeout: 300, poll: 500

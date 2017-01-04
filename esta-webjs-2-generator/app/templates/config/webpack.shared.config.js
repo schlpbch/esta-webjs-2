@@ -9,6 +9,7 @@ const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 module.exports.commonConfig = {
     entry: {
@@ -26,7 +27,7 @@ module.exports.commonConfig = {
 
         // treeshaking
         new CommonsChunkPlugin({
-            name: 'vendor', chunks: ['main'], minChunks: m => /node_modules\//.test(m.resource)
+            name: 'vendor', chunks: ['main'], minChunks: m => /node_modules/.test(m.resource)
         }),
 
         // Specify the correct order the scripts will be injected in
@@ -39,6 +40,10 @@ module.exports.commonConfig = {
 
         new HtmlWebpackPlugin({
             template: 'src/index.html', chunksSortMode: 'dependency', metadata: {baseUrl: '/'}, inject: 'head'
+        }),
+
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'defer'
         })
     ], module: {
         rules: [
