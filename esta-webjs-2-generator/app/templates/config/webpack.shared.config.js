@@ -13,7 +13,8 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 module.exports.commonConfig = {
     entry: {
-        polyfills: './src/polyfills.ts', main: AOT ? './src/main.browser.aot.ts' : './src/main.ts'
+        polyfills: './src/polyfills.ts',
+        main: AOT ? './src/main.browser.aot.ts' : './src/main.ts'
     }, output: {
         filename: '[name].[chunkhash].bundle.js',
         sourceMapFilename: '[name].[chunkhash].bundle.map',
@@ -68,7 +69,7 @@ module.exports.commonConfig = {
             {
                 test: /\.(jpe?g|png|gif|svg|ttf|eot)$/i, use: 'file-loader'
             }, {
-                test: /\.(woff|woff2)$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+                test: /\.(woff|woff2)$/, loader: 'file-loader?limit=10000&mimetype=application/font-woff'
             }
         ]
     }, resolve: {

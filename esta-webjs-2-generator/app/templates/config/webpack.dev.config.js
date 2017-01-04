@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const extend = require('node.extend');
 
 const sharedConfig = require('./webpack.shared.config');

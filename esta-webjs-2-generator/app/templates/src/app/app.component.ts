@@ -40,7 +40,9 @@ import {Component} from '@angular/core';
         <messages-component></messages-component>
         <router-outlet></router-outlet>
       `,
-    styles: [` 
+    styles: [
+            require('bootstrap/dist/css/bootstrap.min.css').toString(),
+        `
         .topfix {
            height: 60px;
         }`]
