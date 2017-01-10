@@ -9,9 +9,9 @@
  */
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './components/home/home.component';
-import {AboutComponent} from './components/about/about.component';
-import {ThemeComponent} from './components/theme/theme.component';
+import {AboutComponent} from "./about/about.component";
+import {HomeComponent} from "./home/home.component";
+import {ThemeComponent} from "./theme/theme.component";
 
 export const appRoutes: Routes = [
     {path: 'about', component: AboutComponent},
@@ -19,4 +19,4 @@ export const appRoutes: Routes = [
     {path: '**', component: HomeComponent}
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes, {useHash: true});
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes, { useHash: true });
