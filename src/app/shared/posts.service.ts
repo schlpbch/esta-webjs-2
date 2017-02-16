@@ -1,10 +1,10 @@
 import {Injectable} from '@angular/core';
-import {Http} from "@angular/http";
+import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class PostsService {
-    endpointUrl: string = 'http://jsonplaceholder.typicode.com/posts';
+    private endpointUrl = 'http://jsonplaceholder.typicode.com/posts';
 
     constructor(private http: Http) {
     }
@@ -18,5 +18,4 @@ export class PostsService {
         return this.http.get(this.endpointUrl + '/' + id)
             .map(res => res.json());
     }
-
 }
