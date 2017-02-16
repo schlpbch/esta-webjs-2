@@ -5,4 +5,10 @@ import {Component} from '@angular/core';
     templateUrl: './app.component.html'
 })
 export class AppComponent {
+    public notificationOptions = {
+        position: ['top', 'right'],
+        timeOut: 5000,
+        maxStack: 5,
+        lastOnBottom: true
+    };
 }

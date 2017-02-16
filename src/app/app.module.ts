@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ThemeComponent } from './theme/theme.component';
+import {SimpleNotificationsModule} from "angular2-notifications";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ThemeComponent } from './theme/theme.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    SimpleNotificationsModule.forRoot(),
     NgbModule.forRoot(),
     routing
   ],
