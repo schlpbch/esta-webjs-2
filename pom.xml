@@ -45,10 +45,9 @@
                     <execution>
                         <id>build-javascript</id>
                         <configuration>
-                            <executable>ng</executable>
+                            <executable>npm</executable>
                             <arguments>
-                                <argument>build</argument>
-								<argument>--prod</argument>
+                                <argument>build-prod</argument>
                             </arguments>
                         </configuration>
                         <phase>generate-resources</phase>
