@@ -47,7 +47,7 @@
                         <configuration>
                             <executable>npm</executable>
                             <arguments>
-                                <argument>start</argument>
+								<argument>run</argument>
 								<argument>build-prod</argument>
                             </arguments>
                         </configuration>

@@ -6,7 +6,7 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <fileSets>
         <fileSet>
-            <directory>${project.build.directory}/build</directory>
+            <directory>dist</directory>
             <outputDirectory>/</outputDirectory>
         </fileSet>
     </fileSets>
