@@ -7,7 +7,7 @@
     <fileSets>
         <fileSet>
             <directory>dist</directory>
-            <outputDirectory>/</outputDirectory>
+            <outputDirectory>dist</outputDirectory>
         </fileSet>
     </fileSets>
 </assembly>

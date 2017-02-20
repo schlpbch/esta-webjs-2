@@ -7,6 +7,6 @@ RUN wget "http://repo.sbb.ch/service/local/artifact/maven/redirect?r=mirror&g=ch
 
 # Extract and move to nginx html folder
 RUN tar -xzf esta-webjs-2-starterkit.tar.gz
-RUN mv build/* /usr/share/nginx/html
+RUN mv dist/* /usr/share/nginx/html
 
 CMD nginx
