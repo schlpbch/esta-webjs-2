@@ -47,7 +47,8 @@
                         <configuration>
                             <executable>npm</executable>
                             <arguments>
-                                <argument>build-prod</argument>
+                                <argument>start</argument>
+								<argument>build-prod</argument>
                             </arguments>
                         </configuration>
                         <phase>generate-resources</phase>
