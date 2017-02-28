@@ -10,11 +10,13 @@
     <name>${project.artifactId}</name>
 
     <properties>
-        <sonar.language>js</sonar.language>
-        <sonar.profile>sbb-it-vorgabe</sonar.profile>
+        <sonar.language>ts</sonar.language>
+        <sonar.profile>TsLint</sonar.profile>
         <sonar.sources>src/app</sonar.sources>
-        <sonar.exclusions>**.spec.js</sonar.exclusions>
-        <sonar.coverage.exclusions>**.spec.js</sonar.coverage.exclusions>
+        <sonar.exclusions>**.spec.ts</sonar.exclusions>
+        <sonar.coverage.exclusions>**.spec.ts</sonar.coverage.exclusions>
+		<sonar.ts.tslint.configPath>tslint.json</sonar.ts.tslint.configPath>
+		<sonar.ts.coverage.lcovReportpath>target/surefire/lcov.info</sonar.ts.coverage.lcovReportpath>
         <sonar.javascript.lcov.reportPath>target/surefire/lcov.info</sonar.javascript.lcov.reportPath>
         <sonar.javascript.jstestdriver.reportsPath>target/surefire</sonar.javascript.jstestdriver.reportsPath>
         <sonar.javascript.coveragePlugin>lcov</sonar.javascript.coveragePlugin>
