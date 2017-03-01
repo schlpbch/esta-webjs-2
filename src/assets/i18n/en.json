@@ -1,0 +1,17 @@
+{
+  "ABOUT": {
+    "SUBTITLE": "This text gets translated by ng2-translate",
+    "TEXT": "Here you see information about ESTA WebJS."
+  },
+  "LOGIN": {
+    "TITLE": "Anmeldung",
+    "BUTTON": "Anmelden",
+    "ERROR": "Bei der Anmeldung ist ein Fehler aufgetreten"
+  },
+  "USER": {
+    "USERNAME": "Benutzername",
+    "USERNAME_REQUIRED": "Der Benutzername muss angegeben werden",
+    "PASSWORD": "Passwort",
+    "PASSWORD_REQUIRED": "Das Passwort muss angegeben werden"
+  }
+}

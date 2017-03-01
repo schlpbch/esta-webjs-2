@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PostsService} from '../shared/posts.service';
 import {NotificationsService} from "angular2-notifications";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-about',
@@ -12,7 +13,9 @@ export class AboutComponent implements OnInit {
   posts: any[];
   postById: any;
 
-  constructor(private postsService: PostsService, private notificationService: NotificationsService) {
+  constructor(private postsService: PostsService, private notificationService: NotificationsService,
+              private translateService: TranslateService) {
+
     this.aboutMessage = 'Über dieses Template';
   }
 
@@ -28,7 +31,6 @@ export class AboutComponent implements OnInit {
   }
 
   changeLanguage(lang) {
-    // this.messagesService
-    //     .errorMessage('Es gibt noch keine offizielle Lösung fuer i18n in Angular2. Sprache: ' + lang);
+      this.translateService.use(lang);
   }
 }

@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
     selector: 'app-root',
@@ -11,4 +12,9 @@ export class AppComponent {
         maxStack: 5,
         lastOnBottom: true
     };
+
+    constructor(translate: TranslateService) {
+        translate.setDefaultLang('de');
+        translate.use('de');
+    }
 }
