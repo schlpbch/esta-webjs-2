@@ -7,12 +7,12 @@
             </div>
             <div class="container">
                 <section>
-                    <h2>Anmeldung</h2>
-                    <p>{{ 'ABOUT.TEXT' | translate }}</p>
+                    <h2>{{ 'ABOUT.TITLE' | translate }}</h2>
+                    <p>{{ 'ABOUT.SUBTITLE' | translate }}</p>
                     <button class="btn btn-primary" (click)="changeLanguage('de')">Deutsch</button>
                     <button class="btn btn-default" (click)="changeLanguage('en')">English</button>
 
-                    <button class="btn btn-primary" (click)="createMessages()">Erzeuge Notifications</button>
+                    <button class="btn btn-primary" (click)="createMessages()">{{ 'ABOUT.NOTIFICATIONS' | translate }}</button>
                 </section>
             </div>
             <div class="spacer"></div>
