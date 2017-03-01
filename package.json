@@ -1,6 +1,7 @@
 {
   "name": "webjs-starterkit",
-  "version": "0.0.0",
+  "description": "This is a starterkit based on angular-cli with enterprise extensions",
+  "version": "2.0.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -47,5 +48,14 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.4.2",
     "typescript": "~2.1.0"
+  },
+  "keywords": [
+    "esta-webjs-starterkit",
+    "angularjs",
+    "webpack"
+  ],
+  "author": {
+    "name": "Reto Lehmann",
+    "email": "reto.lehmann@sbb.ch"
   }
 }
