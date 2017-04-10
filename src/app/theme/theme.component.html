@@ -6,21 +6,21 @@
             <a href="https://v4-alpha.getbootstrap.com/components/alerts/">The official boostrap 4 website</a>.
         </h4>
 
-        <h1 class="display-4">Breadcrumb</h1>
+        <h1 class="display-4 section-title">Breadcrumb</h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="">Home</a></li>
             <li class="breadcrumb-item"><a href="">Navigation 1</a></li>
             <li class="breadcrumb-item active">Navigation 2</li>
         </ol>
 
-        <h1 class="display-4">Jumbotron</h1>
+        <h1 class="display-4 section-title">Jumbotron</h1>
         <div class="jumbotron">
             <h1 class="display-3">Beispiel</h1>
             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
                 to featured content or information.</p>
         </div>
 
-        <h1 class="display-4">Badges</h1>
+        <h1 class="display-4 section-title">Badges</h1>
         <h1>Example heading <span class="badge badge-default">New</span></h1>
         <h2>Example heading <span class="badge badge-default">New</span></h2>
         <h3>Example heading <span class="badge badge-default">New</span></h3>
@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <h1 class="display-4">Navs</h1>
+        <h1 class="display-4 section-title">Navs</h1>
         <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Active</a>
@@ -75,7 +75,7 @@
                 <a class="nav-link disabled" href="#">Disabled</a>
             </li>
         </ul>
-        <h1 class="display-4">Tabs</h1>
+        <h1 class="display-4 section-title">Tabs</h1>
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link active" href="#">Active</a>
@@ -105,7 +105,7 @@
             </li>
         </ul>
 
-        <h1 class="display-4">Buttons</h1>
+        <h1 class="display-4 section-title">Buttons</h1>
         <p>
             <button type="button" class="btn btn-lg btn-secondary">Default</button>
             <button type="button" class="btn btn-lg btn-primary">Primary</button>
@@ -155,7 +155,7 @@
             <button type="button" class="btn btn-lg btn-link" disabled="disabled">Link</button>
         </p>
 
-        <h1 class="display-4">Button Groups</h1>
+        <h1 class="display-4 section-title">Button Groups</h1>
         <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-secondary">Left</button>
             <button type="button" class="btn btn-secondary">Middle</button>
@@ -184,7 +184,7 @@
             </div>
         </div>
 
-        <h1 class="display-4">Forms</h1>
+        <h1 class="display-4 section-title">Forms</h1>
         <h2 class="display-5">Basic Form</h2>
         <div class="row">
             <div class="col-md-12">
@@ -261,7 +261,7 @@
             </div>
         </div>
 
-        <h1 class="display-4">Textual Inputs</h1>
+        <h1 class="display-4 section-title">Textual Inputs</h1>
         <div class="form-group row">
             <label for="example-text-input" class="col-2 col-form-label">Text</label>
             <div class="col-10">
@@ -342,7 +342,7 @@
             </div>
         </div>
 
-        <h1 class="display-4">Radio buttons</h1>
+        <h1 class="display-4 section-title">Radio buttons</h1>
         <fieldset class="form-group">
             <div class="form-check">
                 <label class="form-check-label">
@@ -367,7 +367,7 @@
             </div>
         </fieldset>
 
-        <h1 class="display-4">Checkbox</h1>
+        <h1 class="display-4 section-title">Checkbox</h1>
         <div class="form-check">
             <label class="form-check-label">
                 <input type="checkbox" class="form-check-input">
@@ -376,7 +376,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
 
-        <h1 class="display-4">States</h1>
+        <h1 class="display-4 section-title">States</h1>
         <div class="row">
             <div class="col-md-6">
 
@@ -494,17 +494,18 @@
             </div>
         </div>
 
-        <h1 class="display-4">Cards</h1>
+        <h1 class="display-4 section-title">Cards</h1>
         <div class="row">
             <div class="col-md-6">
                 <div class="card">
-                    <img class="card-img-top" src="" alt="Card image cap">
+                    <div class="card-header">
+                        Quote
+                    </div>
                     <div class="card-block">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <blockquote class="card-blockquote">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
                     </div>
                 </div>
             </div>
@@ -797,7 +798,7 @@
             </div>
         </div>
 
-        <h1 class="display-4">Tables</h1>
+        <h1 class="display-4 section-title">Tables</h1>
         <div class="row">
             <div class="col-md-6">
                 <table class="table">
@@ -934,43 +935,10 @@
                 </table>
             </div>
         </div>
-
-
         <div class="row">
             <div class="col-md-6">
                 <table class="table">
                     <thead class="thead-inverse">
-                    <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                <table class="table">
-                    <thead class="thead-default">
                     <tr>
                         <th>#</th>
                         <th>First Name</th>
@@ -1033,7 +1001,6 @@
                 </table>
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-6">
                 <table class="table table-sm">
@@ -1190,7 +1157,7 @@
             </div>
         </div>
 
-        <h1 class="display-4">Alerts</h1>
+        <h1 class="display-4 section-title">Alerts</h1>
         <div class="alert alert-success" role="alert">
             <strong>Well done!</strong> You successfully read this important alert message.
         </div>
@@ -1231,7 +1198,7 @@
             <strong>Holy guacamole!</strong> You should check in on some of those fields below.
         </div>
 
-        <h1 class="display-4">List groups</h1>
+        <h1 class="display-4 section-title">List groups</h1>
         <div class="row">
             <div class="col-sm-4">
                 <ul class="list-group">
@@ -1319,7 +1286,7 @@
         </div>
 
 
-        <h1 class="display-4">Progress Bars</h1>
+        <h1 class="display-4 section-title">Progress Bars</h1>
 
         <div class="row top-margin">
             <div class="col-md-12">

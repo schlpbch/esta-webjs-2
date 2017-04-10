@@ -4,8 +4,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-theme',
   templateUrl: './theme.component.html',
   styles: [`
-    h1 {
-      margin-top: 25px;
+    .section-title {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: solid 0.1px lightgray;
     }
     .top-margin {
         margin-top: 20px;
