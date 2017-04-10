@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-theme',
   templateUrl: './theme.component.html',
   styles: [`
-    .section-title {
+    .title {
       margin-top: 15px;
       padding-top: 15px;
       border-top: solid 0.1px lightgray;
@@ -14,6 +14,9 @@ import { Component, OnInit } from '@angular/core';
     }
     small{
         font-size: 20px;
+    }
+    .subtitle{
+        margin-top: 30px;
     }
   `]
 })
