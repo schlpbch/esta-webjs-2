@@ -12,6 +12,9 @@ import { Component, OnInit } from '@angular/core';
     .top-margin {
         margin-top: 20px;
     }
+    small{
+        font-size: 20px;
+    }
   `]
 })
 export class ThemeComponent implements OnInit {
