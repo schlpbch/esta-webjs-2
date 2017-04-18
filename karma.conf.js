@@ -14,16 +14,14 @@ module.exports = function (config) {
     hostname: process.env.host || ip.address(),
     basePath: __dirname,
     frameworks: ['jasmine', '@angular/cli'],
-    /*
-     plugins: [
-     require('karma-jasmine'),
-     require('karma-chrome-launcher'),
-     require('karma-jasmine-html-reporter'),
-     require('karma-coverage-istanbul-reporter'),
-     require('karma-webdriver-launcher'),
-     require('@angular/cli/plugins/karma')
-     ],
-     */
+    plugins: [
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage-istanbul-reporter'),
+      require('karma-webdriver-launcher'),
+      require('@angular/cli/plugins/karma')
+    ],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
@@ -70,6 +68,10 @@ module.exports = function (config) {
       }
     },
     browsers: ['Chrome'],
-    singleRun: false
+    singleRun: false,
+    captureTimeout: 60 * 1000,
+    browserDisconnectTimeout: 15 * 1000,
+    browserDisconnectTolerance: 5,
+    browserNoActivityTimeout: 15 * 10000
   });
 };
