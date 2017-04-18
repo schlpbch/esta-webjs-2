@@ -22,6 +22,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThemeComponent implements OnInit {
 
+  protected bootstrapDokuPage = 'https://v4-alpha.getbootstrap.com/components';
+
   constructor() { }
 
   ngOnInit() {
