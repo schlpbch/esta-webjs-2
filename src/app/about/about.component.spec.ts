@@ -1,28 +1,47 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {PipeTransform, Pipe} from '@angular/core';
 
-import { AboutComponent } from './about.component';
+import {AboutComponent} from './about.component';
+import {TranslateService} from "@ngx-translate/core";
+import {XHRBackend, HttpModule} from "@angular/http";
+import {MockBackend} from "@angular/http/testing";
+import {NotificationsService} from "angular2-notifications";
+
+@Pipe({name: 'translate'})
+class MockPipe implements PipeTransform {
+    transform(value: any, ...args: any[]): any {
+        return undefined;
+    }
+}
 
 describe('AboutComponent', () => {
-  let component: AboutComponent;
-  let fixture: ComponentFixture<AboutComponent>;
+    let component: AboutComponent;
+    let fixture: ComponentFixture<AboutComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ AboutComponent ]
-    })
-    .compileComponents();
-  }));
+    class NotificationServiceMock{}
+    class TranslateServiceMock{}
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AboutComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            imports: [HttpModule],
+            declarations: [AboutComponent, MockPipe],
+            providers: [{provide: XHRBackend, useClass: MockBackend},
+                {provide: NotificationsService, useClass: NotificationServiceMock},
+                {provide: TranslateService, useValue: TranslateServiceMock}
+            ]
+        }).compileComponents();
+    }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    beforeEach(() => {
+        fixture = TestBed
+            .createComponent(AboutComponent);
+
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
+
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });
