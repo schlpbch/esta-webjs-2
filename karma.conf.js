@@ -12,6 +12,7 @@ module.exports = function (config) {
 
     config.set({
         hostname: process.env.host || ip.address(),
+        configFile: __dirname + '/karma.conf.js',
         basePath: __dirname,
         frameworks: ['jasmine', '@angular/cli'],
         plugins: [
