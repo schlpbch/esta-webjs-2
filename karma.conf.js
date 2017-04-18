@@ -2,6 +2,12 @@
 // https://karma-runner.github.io/0.13/config/configuration-file.html
 
 module.exports = function (config) {
+
+    var seleniumWebgrid = {
+        hostname: 'webtestgrid.sbb.ch',
+        port: 4444
+    };
+
     config.set({
         basePath: '',
         frameworks: ['jasmine', '@angular/cli'],
@@ -38,8 +44,26 @@ module.exports = function (config) {
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
-        autoWatch: true,
-        browsers: ['Chrome'],
+        autoWatch: false,
+        customLaunchers: {
+            'SeleniumCH': {
+                base: 'WebDriver',
+                config: seleniumWebgrid,
+                browserName: 'chrome'
+            },
+            'SeleniumFF': {
+                base: 'WebDriver',
+                config: seleniumWebgrid,
+                browserName: 'firefox'
+            },
+            'SeleniumIE': {
+                base: 'WebDriver',
+                config: seleniumWebgrid,
+                browserName: 'internet explorer',
+                'x-ua-compatible': 'IE=edge'
+            }
+        },
+        browsers: ['SeleniumCH'],
         singleRun: false
     });
 };
