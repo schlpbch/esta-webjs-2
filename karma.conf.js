@@ -12,7 +12,6 @@ module.exports = function (config) {
 
     config.set({
         hostname: process.env.host || ip.address(),
-        configFile: __dirname + '/karma.conf.js',
         basePath: __dirname,
         frameworks: ['jasmine', '@angular/cli'],
         plugins: [
@@ -68,7 +67,7 @@ module.exports = function (config) {
                 'x-ua-compatible': 'IE=edge'
             }
         },
-        browsers: ['SeleniumCH'],
+        browsers: ['SeleniumFF', 'SeleniumCH'],
         singleRun: false
     });
 };
