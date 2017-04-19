@@ -47,7 +47,7 @@ module.exports = function (config) {
       : ['progress', 'kjhtml'],
     port: process.env.externalport || 7777,
     colors: true,
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
     autoWatch: false,
     customLaunchers: {
       'SeleniumCH': {
@@ -67,7 +67,7 @@ module.exports = function (config) {
         'x-ua-compatible': 'IE=edge'
       }
     },
-    browsers: ['Chrome'],
+    browsers: ['SeleniumCH'],
     singleRun: false,
     captureTimeout: 60 * 1000,
     browserDisconnectTimeout: 15 * 1000,
