@@ -48,7 +48,7 @@ module.exports = function (config) {
             : ['progress', 'kjhtml'],
         port: process.env.externalport || 7777,
         colors: true,
-        logLevel: config.LOG_DEBUG,
+        logLevel: config.LOG_INFO,
         autoWatch: false,
         customLaunchers: {
             'SeleniumCH': {
