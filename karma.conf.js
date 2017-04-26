@@ -17,6 +17,7 @@ module.exports = function (config) {
         plugins: [
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
+            require('karma-phantomjs-launcher'),
             require('karma-jasmine-html-reporter'),
             require('karma-coverage-istanbul-reporter'),
             require('karma-webdriver-launcher'),
@@ -67,7 +68,7 @@ module.exports = function (config) {
                 'x-ua-compatible': 'IE=edge'
             }
         },
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
         singleRun: true
     });
 };
