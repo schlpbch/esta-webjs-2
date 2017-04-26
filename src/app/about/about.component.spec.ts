@@ -1,14 +1,21 @@
-/* tslint:disable:no-unused-variable */
+/**
+ * Copyright (C) Schweizerische Bundesbahnen SBB, 2017.
+ *
+ * ESTA WebJS: Unit-Tests AboutComponent
+ *
+ * @author u218609 (Kevin Kreuzer)
+ * @version: 2.0.0
+ * @since 26.04.2017, 2017.
+ */
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {PipeTransform, Pipe} from '@angular/core';
-
-import {AboutComponent} from './about.component';
 import {TranslateService} from "@ngx-translate/core";
 import {XHRBackend, HttpModule} from "@angular/http";
 import {MockBackend} from "@angular/http/testing";
 import {NotificationsService} from "angular2-notifications";
 import {PostsService} from '../shared/posts.service';
 import {Observable} from 'rxjs';
+import {AboutComponent} from './about.component';
 
 @Pipe({name: 'translate'})
 class MockPipe implements PipeTransform {

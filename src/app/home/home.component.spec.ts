@@ -1,4 +1,12 @@
-/* tslint:disable:no-unused-variable */
+/**
+ * Copyright (C) Schweizerische Bundesbahnen SBB, 2017.
+ *
+ * ESTA WebJS: Unit-Tests HomeComponent
+ *
+ * @author u218609 (Kevin Kreuzer)
+ * @version: 2.0.0
+ * @since 26.04.2017, 2017.
+ */
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {HomeComponent} from './home.component';
 
