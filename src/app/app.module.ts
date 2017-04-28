@@ -9,7 +9,6 @@ import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
 import {ThemeComponent} from './theme/theme.component';
-import {SimpleNotificationsModule} from 'angular2-notifications';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {CoreModule} from './core/core.module';
@@ -31,7 +30,6 @@ export function HttpLoaderFactory(http: Http) {
         CoreModule,
         FormsModule,
         HttpModule,
-        SimpleNotificationsModule.forRoot(),
         NgbModule.forRoot(),
         TranslateModule.forRoot({
             loader: {

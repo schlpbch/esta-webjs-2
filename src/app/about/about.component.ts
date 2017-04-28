@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PostsService} from '../shared/posts.service';
+import {PostsService} from './posts.service';
 import {NotificationsService} from "angular2-notifications";
 import {TranslateService} from "@ngx-translate/core";
 

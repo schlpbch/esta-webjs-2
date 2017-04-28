@@ -11,11 +11,13 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {NavComponent} from './nav/nav.component';
 import {RouterModule} from '@angular/router';
+import {NotificationsComponent} from './notifications/notifications.component';
+import {SimpleNotificationsModule} from 'angular2-notifications';
 
 @NgModule({
-    imports: [CommonModule, RouterModule],
-    declarations: [NavComponent],
-    exports: [NavComponent]
+    imports: [CommonModule, RouterModule, SimpleNotificationsModule.forRoot()],
+    declarations: [NavComponent, NotificationsComponent],
+    exports: [NavComponent, NotificationsComponent]
 })
 export class CoreModule {
 }
