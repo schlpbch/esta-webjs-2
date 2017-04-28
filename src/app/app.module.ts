@@ -12,6 +12,7 @@ import {ThemeComponent} from './theme/theme.component';
 import {SimpleNotificationsModule} from 'angular2-notifications';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {CoreModule} from './core/core.module';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -27,6 +28,7 @@ export function HttpLoaderFactory(http: Http) {
     ],
     imports: [
         BrowserModule,
+        CoreModule,
         FormsModule,
         HttpModule,
         SimpleNotificationsModule.forRoot(),
