@@ -28,8 +28,6 @@ export function HttpLoaderFactory(http: Http) {
     imports: [
         BrowserModule,
         CoreModule,
-        FormsModule,
-        HttpModule,
         NgbModule.forRoot(),
         TranslateModule.forRoot({
             loader: {
