@@ -7,7 +7,7 @@
  * @version: 2.0.0
  * @since 28.04.2017, 2017.
  */
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 interface NavItem {
     displayName: string,
@@ -15,7 +15,7 @@ interface NavItem {
 }
 
 @Component({
-    selector: 'nav',
+    selector: 'navbar',
     templateUrl: './nav.component.html',
     styleUrls: ['./nav.component.css']
 })
@@ -27,5 +27,6 @@ export class NavComponent {
         {displayName: 'Theme', routerLink: 'theme'}
     ]
 
-    constructor(){}
+    constructor() {
+    }
 }
