@@ -17,7 +17,6 @@ exports.config = {
     },
     directConnect: true,
     baseUrl: 'http://' + hostname + ':' + externalport,
-    seleniumAddress: 'http://webtestgrid.sbb.ch:4444/wd/hub',
     framework: 'jasmine',
     jasmineNodeOpts: {
         showColors: true,
