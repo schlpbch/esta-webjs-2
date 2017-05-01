@@ -15,7 +15,6 @@ exports.config = {
     capabilities: {
         'browserName': 'chrome'
     },
-    directConnect: true,
     baseUrl: 'http://' + hostname + ':' + externalport,
     framework: 'jasmine',
     jasmineNodeOpts: {
