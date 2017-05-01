@@ -14,12 +14,10 @@ exports.config = {
     ],
     multiCapabilities: [
         {
-            browserName: 'chrome',
-            seleniumAddress: hostname + ':' + externalport
+            browserName: 'chrome'
         },
         {
-            browserName: 'firefox',
-            seleniumAddress: hostname + ':' + externalport
+            browserName: 'firefox'
         }
     ],
     baseUrl: 'http://' + hostname + ':' + externalport,
