@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "test": "ng test",
     "e2e": "ng e2e",
-    "prebuild-prod": "ng e2e --config=protractor.webgrid.conf.js",
+    "prebuild-prod": "ng e2e --port=process.env.externalport --host=0.0.0.0 --config=protractor.webgrid.conf.js",
     "build-prod": "ng build --prod"
   },
   "private": true,
