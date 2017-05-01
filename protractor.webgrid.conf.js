@@ -2,6 +2,10 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter } = require('jasmine-spec-reporter');
+const ip = require('ip');
+
+let hostname = process.env.host || ip.address();
+let externalport = process.env.externalport || 4200;
 
 exports.config = {
   allScriptsTimeout: 11000,
@@ -11,8 +15,8 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome'
   },
-  directConnect: true,
-  baseUrl: 'http://localhost:4200/',
+  baseUrl: 'http://' + hostname + ':' + externalport,
+  seleniumAddress: 'http://webtestgrid.sbb.ch:4444/wd/hub',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,

@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "test": "ng test",
     "e2e": "ng e2e",
-    "prebuild-prod": "protractor --seleniumAddress='http://webtestgrid.sbb.ch:4444/wd/hub'",
+    "prebuild-prod": "ng e2e --config=protractor.webgrid.conf.js",
     "build-prod": "ng build --prod"
   },
   "private": true,
