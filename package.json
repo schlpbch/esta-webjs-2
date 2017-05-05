@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "test": "ng test",
     "e2e": "ng e2e",
-    "prebuild-prod": "ng e2e --port=process.env.externalport --host=0.0.0.0 --config=protractor.webgrid.conf.js",
+    "prebuild-prod": "ng e2e --port=process.env.externalport --host=$(my-local-ip) --config=protractor.webgrid.conf.js",
     "build-prod": "ng build --prod"
   },
   "private": true,
@@ -51,6 +51,7 @@
     "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "my-local-ip": "^1.0.0",
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
