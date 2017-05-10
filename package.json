@@ -9,9 +9,10 @@
     "start": "ng serve",
     "lint": "ng lint",
     "test": "ng test --watch=false",
+    "test-selenium": "ng test --watch=false --browsers=SeleniumCH,SeleniumFF",
     "e2e": "ng e2e",
-    "prebuild-prod": "ng test --watch=false --browsers=SeleniumCH,SeleniumFF",
-    "prebuild-prod": "ng e2e --port=process.env.externalport --host=$(my-local-ip) --config=protractor.webgrid.conf.js",
+    "e2e-selenium": "ng e2e --disableHostCheck=true --publicHost=http://$(my-local-ip):process.env.externalport --config=protractor.webgrid.conf.js",
+    "prebuild-prod": "test-selenium && e2e-selenium",
     "build-prod": "ng build --prod"
   },
   "private": true,
@@ -38,12 +39,11 @@
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.0",
+    "@angular/cli": "v1.1.0-beta.1",
     "@angular/compiler-cli": "^4.1.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
-    "ip": "^1.1.5",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "karma": "~1.4.1",

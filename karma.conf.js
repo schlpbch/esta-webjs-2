@@ -1,8 +1,6 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/0.13/config/configuration-file.html
 
-var ip = require('ip');
-
 module.exports = function (config) {
 
     var seleniumWebgrid = {
@@ -11,7 +9,7 @@ module.exports = function (config) {
     };
 
     config.set({
-        hostname: process.env.host || ip.address(),
+        hostname: process.env.host || require('my-local-ip')(),
         basePath: __dirname,
         frameworks: ['jasmine', '@angular/cli'],
         plugins: [

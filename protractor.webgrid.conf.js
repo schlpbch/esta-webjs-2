@@ -2,10 +2,9 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const {SpecReporter} = require('jasmine-spec-reporter');
-const ip = require('ip');
 
-let hostname = process.env.host || ip.address();
-let externalport = process.env.externalport || 4200;
+let hostname = process.env.host || require('my-local-ip')();
+let externalport = process.env.externalport;
 
 exports.config = {
     allScriptsTimeout: 11000,
