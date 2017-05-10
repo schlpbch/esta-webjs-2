@@ -22,7 +22,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThemeComponent implements OnInit {
 
-  protected bootstrapDocumentationUrl = 'https://v4-alpha.getbootstrap.com/components';
+  public bootstrapDocumentationUrl = 'https://v4-alpha.getbootstrap.com/components';
 
   constructor() { }
 
