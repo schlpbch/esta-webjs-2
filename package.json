@@ -11,7 +11,7 @@
     "test": "ng test --watch=false",
     "test-selenium": "ng test --watch=false --browsers=SeleniumCH,SeleniumFF",
     "e2e": "ng e2e",
-    "e2e-selenium": "ng e2e --disableHostCheck=true --publicHost=http://$(my-local-ip):process.env.externalport --host=$(my-local-ip) --port=process.env.externalport --config=protractor.webgrid.conf.js",
+    "e2e-selenium": "ng e2e --disableHostCheck=true --publicHost=http://$(my-local-ip):$(echo $externalport) --host=$(my-local-ip) --port=process.env.externalport --config=protractor.webgrid.conf.js",
     "prebuild-prod": "npm run test-selenium && npm run e2e-selenium",
     "build-prod": "ng build --prod --progress=false"
   },
