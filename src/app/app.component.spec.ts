@@ -1,34 +1,40 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {TestBed, async} from '@angular/core/testing';
+import {AppComponent} from './app.component';
+import {RouterModule} from "@angular/router";
+import {SimpleNotificationsModule} from 'angular2-notifications';
+import {TranslateService} from "@ngx-translate/core";
 
 describe('AppComponent', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+    beforeEach(() => {
+
+        class TranslationMock {
+            public setDefaultLang() {
+            }
+
+            public use() {
+            }
+        }
+
+        TestBed.configureTestingModule({
+            imports: [
+                RouterModule.forRoot([], {useHash: true}),
+                SimpleNotificationsModule.forRoot()
+            ],
+            declarations: [
+                AppComponent
+            ],
+            providers: [
+                {provide: TranslateService, useClass: TranslationMock}
+            ]
+        });
+        TestBed.compileComponents();
     });
-    TestBed.compileComponents();
-  });
 
-  it('should create the app', async(() => {
-    let fixture = TestBed.createComponent(AppComponent);
-    let app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  }));
-
-  it(`should have as title 'app works!'`, async(() => {
-    let fixture = TestBed.createComponent(AppComponent);
-    let app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app works!');
-  }));
-
-  it('should render title in a h1 tag', async(() => {
-    let fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
-  }));
+    it('should create the app', async(() => {
+        let fixture = TestBed.createComponent(AppComponent);
+        let app = fixture.debugElement.componentInstance;
+        expect(app).toBeTruthy();
+    }));
 });
