@@ -7,12 +7,15 @@
  * @version: 2.0.0
  * @since 28.04.2017, 2017.
  */
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
+
 @Component({
     selector: 'notifications',
-    templateUrl: './notifications.component.html'
+    templateUrl: './notifications.component.html',
+    styleUrls: ['./notifications.component.css'],
+    encapsulation: ViewEncapsulation.None
 })
-export class NotificationsComponent{
+export class NotificationsComponent {
 
     public notificationOptions = {
         position: ['top', 'right'],

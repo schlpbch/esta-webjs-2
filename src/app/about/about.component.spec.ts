@@ -13,7 +13,7 @@ import {TranslateService} from "@ngx-translate/core";
 import {XHRBackend, HttpModule} from "@angular/http";
 import {MockBackend} from "@angular/http/testing";
 import {NotificationsService} from "angular2-notifications";
-import {PostsService} from '../shared/posts.service';
+import {PostsService} from './posts.service';
 import {Observable} from 'rxjs';
 import {AboutComponent} from './about.component';
 
