@@ -14,6 +14,7 @@ describe('AboutPage', function () {
     let aboutPage: AboutPage;
 
     beforeEach(() => {
+      console.log('reto2', browser.baseUrl);
         aboutPage = new AboutPage();
         browser.get('#/about');
     });
