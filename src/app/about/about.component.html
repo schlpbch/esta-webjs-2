@@ -6,10 +6,10 @@
             </div>
             <div class="container">
                 <section>
-                    <h2>{{ 'ABOUT.TITLE' | translate }}</h2>
-                    <p>{{ 'ABOUT.SUBTITLE' | translate }}</p>
-                    <button class="btn btn-primary" (click)="changeLanguage('de')">Deutsch</button>
-                    <button class="btn btn-secondary" (click)="changeLanguage('en')">English</button>
+                    <h2 id="about-title">{{ 'ABOUT.TITLE' | translate }}</h2>
+                    <p id="about-subtitle">{{ 'ABOUT.SUBTITLE' | translate }}</p>
+                    <button id="change-to-german-button" class="btn btn-primary" (click)="changeLanguage('de')">Deutsch</button>
+                    <button id="change-to-english-button" class="btn btn-secondary" (click)="changeLanguage('en')">English</button>
 
                     <button class="btn btn-success" (click)="createMessages()">{{ 'ABOUT.NOTIFICATIONS' | translate }}</button>
                 </section>
