@@ -24,7 +24,7 @@ import {NotificationsComponent} from './notifications/notifications.component';
         FormsModule,
         HttpModule,
         RouterModule,
-        SimpleNotificationsModule.forRoot()
+        SimpleNotificationsModule
     ],
     declarations: [
         NavComponent,

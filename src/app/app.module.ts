@@ -13,8 +13,9 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {AboutComponent} from './about/about.component';
+import {SimpleNotificationsModule} from 'angular2-notifications';
 
+import {AboutComponent} from './about/about.component';
 import {AppComponent} from './app.component';
 import {routing} from './app.routes';
 import {CoreModule} from './core/core.module';
@@ -37,6 +38,7 @@ export function HttpLoaderFactory(http: Http) {
         BrowserModule,
         CoreModule,
         NgbModule.forRoot(),
+        SimpleNotificationsModule.forRoot(),
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

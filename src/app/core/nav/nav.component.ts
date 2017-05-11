@@ -21,7 +21,7 @@ interface NavItem {
 })
 export class NavComponent {
 
-    protected navItems: Array<NavItem> = [
+    public navItems: Array<NavItem> = [
         {displayName: 'Home', routerLink: ''},
         {displayName: 'About', routerLink: 'about'},
         {displayName: 'Theme', routerLink: 'theme'}
