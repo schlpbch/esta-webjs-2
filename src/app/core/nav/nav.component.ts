@@ -8,25 +8,21 @@
  * @since 28.04.2017, 2017.
  */
 import {Component} from '@angular/core';
-
-interface NavItem {
-    displayName: string,
-    routerLink: string
-}
+import {MenuItem} from "primeng/primeng";
 
 @Component({
-    selector: 'navbar',
-    templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.css']
+  selector: 'navbar',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
 
-    public navItems: Array<NavItem> = [
-        {displayName: 'Home', routerLink: ''},
-        {displayName: 'About', routerLink: 'about'},
-        {displayName: 'Theme', routerLink: 'theme'}
-    ]
+  public navItems: Array<MenuItem> = [
+    {label: 'Home', routerLink: ''},
+    {label: 'About', routerLink: ['about']},
+    {label: 'Theme', routerLink: ['theme']}
+  ]
 
-    constructor() {
-    }
+  constructor() {
+  }
 }
