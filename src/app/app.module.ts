@@ -1,17 +1,26 @@
-import {BrowserModule} from '@angular/platform-browser';
+/**
+ * Copyright (C) Schweizerische Bundesbahnen SBB, 2017.
+ *
+ * ESTA WebJS: Navbar Component
+ *
+ * @author u218609 (Kevin Kreuzer)
+ * @version: 2.0.0
+ * @since 10.05.2017, 2017.
+ */
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {HttpModule, Http} from '@angular/http';
+import {Http} from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {routing} from './app.routes';
-
-import {AppComponent} from './app.component';
-import {HomeComponent} from './home/home.component';
-import {AboutComponent} from './about/about.component';
-import {ThemeComponent} from './theme/theme.component';
-import {SimpleNotificationsModule} from 'angular2-notifications';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {SimpleNotificationsModule} from 'angular2-notifications';
+
+import {AboutComponent} from './about/about.component';
+import {AppComponent} from './app.component';
+import {routing} from './app.routes';
+import {CoreModule} from './core/core.module';
+import {HomeComponent} from './home/home.component';
+import {ThemeComponent} from './theme/theme.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -27,10 +36,9 @@ export function HttpLoaderFactory(http: Http) {
     ],
     imports: [
         BrowserModule,
-        FormsModule,
-        HttpModule,
-        SimpleNotificationsModule.forRoot(),
+        CoreModule,
         NgbModule.forRoot(),
+        SimpleNotificationsModule.forRoot(),
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
