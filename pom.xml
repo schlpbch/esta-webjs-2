@@ -15,11 +15,9 @@
         <sonar.sources>src/app</sonar.sources>
         <sonar.exclusions>**.spec.ts</sonar.exclusions>
         <sonar.coverage.exclusions>**.spec.ts</sonar.coverage.exclusions>
-		<sonar.ts.tslint.configPath>tslint.json</sonar.ts.tslint.configPath>
-		<sonar.ts.coverage.lcovReportpath>target/surefire/lcov.info</sonar.ts.coverage.lcovReportpath>
-        <sonar.javascript.lcov.reportPath>target/surefire/lcov.info</sonar.javascript.lcov.reportPath>
+        <sonar.ts.tslint.configPath>tslint.json</sonar.ts.tslint.configPath>
+        <sonar.ts.coverage.lcovReportpath>coverage/lcov.info</sonar.ts.coverage.lcovReportpath>
         <sonar.javascript.jstestdriver.reportsPath>target/surefire</sonar.javascript.jstestdriver.reportsPath>
-        <sonar.javascript.coveragePlugin>lcov</sonar.javascript.coveragePlugin>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
