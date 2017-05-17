@@ -13,10 +13,10 @@
         <sonar.language>ts</sonar.language>
         <sonar.profile>TsLint</sonar.profile>
         <sonar.sources>src/app</sonar.sources>
-        <sonar.exclusions>**.spec.ts</sonar.exclusions>
+        <!--<sonar.exclusions>**.spec.ts</sonar.exclusions>-->
         <sonar.coverage.exclusions>**.spec.ts</sonar.coverage.exclusions>
         <sonar.ts.tslint.configPath>tslint.json</sonar.ts.tslint.configPath>
-        <sonar.ts.coverage.lcovReportpath>coverage/lcov.info</sonar.ts.coverage.lcovReportpath>
+        <sonar.ts.coverage.lcovReportpath>./coverage/lcov.info</sonar.ts.coverage.lcovReportpath>
         <sonar.javascript.jstestdriver.reportsPath>target/surefire</sonar.javascript.jstestdriver.reportsPath>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
