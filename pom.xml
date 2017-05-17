@@ -19,7 +19,7 @@
     <sonar.exclusions>**.spec.ts</sonar.exclusions>
     <sonar.coverage.exclusions>**.spec.ts</sonar.coverage.exclusions>
     <sonar.ts.tslint.configPath>tslint.json</sonar.ts.tslint.configPath>
-    <sonar.ts.coverage.lcovReportpath>coverage/lcov.info</sonar.ts.coverage.lcovReportpath>
+    <sonar.ts.coverage.lcovReportpath>/var/data/jenkins/workspace/kd.esta.esta-webjs-2.git.nightly/coverage/lcov.info</sonar.ts.coverage.lcovReportpath>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
