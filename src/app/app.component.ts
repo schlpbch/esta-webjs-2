@@ -16,6 +16,13 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class AppComponent {
 
+    public notificationOptions = {
+        position: ['top', 'right'],
+        timeOut: 5000,
+        maxStack: 5,
+        lastOnBottom: true
+    };
+
     constructor(translate: TranslateService) {
         translate.setDefaultLang('de');
         translate.use('de');

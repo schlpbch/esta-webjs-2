@@ -3,3 +3,7 @@ body {
     padding-top: 5rem;
 }
 
+.simple-notification-wrapper {
+    z-index: 1030 !important;
+}
+

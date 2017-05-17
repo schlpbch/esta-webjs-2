@@ -12,28 +12,19 @@ import {NgModule, Optional, SkipSelf} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
-import {SimpleNotificationsModule} from 'angular2-notifications';
 import {throwIfAlreadyLoaded} from './module-import-guard';
 
 import {NavComponent} from './nav/nav.component';
-import {NotificationsComponent} from './notifications/notifications.component';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         HttpModule,
-        RouterModule,
-        SimpleNotificationsModule
+        RouterModule
     ],
-    declarations: [
-        NavComponent,
-        NotificationsComponent
-    ],
-    exports: [
-        NavComponent,
-        NotificationsComponent
-    ]
+    declarations: [NavComponent],
+    exports: [NavComponent]
 })
 export class CoreModule {
 
