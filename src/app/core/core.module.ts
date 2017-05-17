@@ -15,22 +15,23 @@ import {RouterModule} from '@angular/router';
 import {throwIfAlreadyLoaded} from './module-import-guard';
 
 import {NavComponent} from './nav/nav.component';
-import {MenubarModule} from "primeng/primeng";
+import {MenubarModule, ButtonModule} from "primeng/primeng";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    HttpModule,
-    RouterModule,
-    MenubarModule
-  ],
-  declarations: [NavComponent],
-  exports: [NavComponent]
+    imports: [
+        CommonModule,
+        FormsModule,
+        HttpModule,
+        RouterModule,
+        MenubarModule,
+        ButtonModule
+    ],
+    declarations: [NavComponent],
+    exports: [NavComponent]
 })
 export class CoreModule {
 
-  constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
-    throwIfAlreadyLoaded(parentModule, 'core module');
-  }
+    constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
+        throwIfAlreadyLoaded(parentModule, 'core module');
+    }
 }

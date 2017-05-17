@@ -1,5 +1,5 @@
 <main>
-    <div class="container">
+    <div class="comp_app">
         <div class="jumbotron">
             <div>
                 <h1>{{ aboutMessage }} <small>Eine Demoseite</small></h1>
@@ -8,8 +8,8 @@
                 <section>
                     <h2 id="about-title">{{ 'ABOUT.TITLE' | translate }}</h2>
                     <p id="about-subtitle">{{ 'ABOUT.SUBTITLE' | translate }}</p>
-                    <button id="change-to-german-button" class="btn btn-primary" (click)="changeLanguage('de')">Deutsch</button>
-                    <button id="change-to-english-button" class="btn btn-secondary" (click)="changeLanguage('en')">English</button>
+                    <button pButton type="button" id="change-to-german-button" (click)="changeLanguage('de')">Deutsch</button>
+                    <button pButton type="button" id="change-to-english-button" (click)="changeLanguage('en')">English</button>
 
                     <button class="btn btn-success" (click)="createMessages()">{{ 'ABOUT.NOTIFICATIONS' | translate }}</button>
                 </section>
