@@ -16,6 +16,7 @@ module.exports = function (config) {
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
             require('karma-nightmare'),
+            require('karma-junit-reporter'),
             require('karma-jasmine-html-reporter'),
             require('karma-coverage-istanbul-reporter'),
             require('karma-webdriver-launcher'),
@@ -41,8 +42,11 @@ module.exports = function (config) {
             environment: 'dev'
         },
         reporters: config.angularCli && config.angularCli.codeCoverage
-            ? ['progress', 'coverage-istanbul']
+            ? ['progress', 'coverage-istanbul', 'junit']
             : ['progress', 'kjhtml'],
+        junitReporter: {
+          outputDir: 'target/surefire', suite: 'unit'
+        },
         port: process.env.externalport || 7777,
         colors: true,
         logLevel: config.LOG_INFO,
