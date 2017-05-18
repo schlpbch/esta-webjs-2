@@ -14,7 +14,7 @@
     <sonar.language>ts</sonar.language>
     <sonar.profile>TsLint</sonar.profile>
     <sonar.sources>src/app</sonar.sources>
-    <sonar.log.level>DEBUG</sonar.log.level>
+    <sonar.log.level>TRACE</sonar.log.level>
     <sonar.verbose>true</sonar.verbose>
     <sonar.exclusions>**.spec.ts</sonar.exclusions>
     <sonar.coverage.exclusions>**.spec.ts</sonar.coverage.exclusions>
