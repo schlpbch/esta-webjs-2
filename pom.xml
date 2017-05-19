@@ -14,12 +14,12 @@
     <sonar.language>ts</sonar.language>
     <sonar.profile>TsLint</sonar.profile>
     <sonar.sources>src/app</sonar.sources>
-    <sonar.log.level>TRACE</sonar.log.level>
     <sonar.verbose>true</sonar.verbose>
     <sonar.exclusions>**.spec.ts</sonar.exclusions>
     <sonar.coverage.exclusions>**.spec.ts</sonar.coverage.exclusions>
     <sonar.ts.tslint.configPath>tslint.json</sonar.ts.tslint.configPath>
-    <sonar.ts.coverage.lcovReportpath>/var/data/jenkins/workspace/kd.esta.esta-webjs-2.git.nightly/coverage/lcov.info</sonar.ts.coverage.lcovReportpath>
+    <sonar.javascript.coveragePlugin>lcov</sonar.javascript.coveragePlugin>
+    <sonar.javascript.lcov.reportPath>coverage/lcov.info</sonar.javascript.lcov.reportPath>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
