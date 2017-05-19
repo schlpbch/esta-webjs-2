@@ -15,11 +15,10 @@
     <sonar.profile>TsLint</sonar.profile>
     <sonar.sources>src/app</sonar.sources>
     <sonar.verbose>true</sonar.verbose>
-    <sonar.exclusions>**.spec.ts</sonar.exclusions>
-    <sonar.coverage.exclusions>**.spec.ts</sonar.coverage.exclusions>
+    <sonar.exclusions>**/node_modules/**,**/*.spec.ts</sonar.exclusions>
+    <sonar.test.inclusion>**/*.spec.ts</sonar.test.inclusion>
     <sonar.ts.tslint.configPath>tslint.json</sonar.ts.tslint.configPath>
-    <sonar.javascript.coveragePlugin>lcov</sonar.javascript.coveragePlugin>
-    <sonar.javascript.lcov.reportPath>coverage/lcov.info</sonar.javascript.lcov.reportPath>
+    <sonar.ts.coverage.lcovReportPath>coverage/lcov.info</sonar.ts.coverage.lcovReportPath>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
