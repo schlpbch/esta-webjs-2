@@ -20,8 +20,9 @@
       "prefix": "app",
       "styles": [
         "../node_modules/font-awesome/scss/font-awesome.scss",
-        "../node_modules/primeng/resources/themes/omega/theme.css",
-        "styles.scss"
+        "../node_modules/primeng/resources/primeng.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/primeng/resources/themes/omega/theme.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

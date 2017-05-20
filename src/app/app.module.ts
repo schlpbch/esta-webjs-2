@@ -21,6 +21,7 @@ import {routing} from './app.routes';
 import {CoreModule} from './core/core.module';
 import {HomeComponent} from './home/home.component';
 import {ThemeComponent} from './theme/theme.component';
+import {ButtonModule} from 'primeng/primeng';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -46,6 +47,7 @@ export function HttpLoaderFactory(http: Http) {
                 deps: [Http]
             }
         }),
+        ButtonModule,
         routing
     ],
     providers: [],

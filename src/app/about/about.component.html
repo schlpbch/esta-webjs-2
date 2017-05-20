@@ -1,38 +1,37 @@
 <main>
-  <div class="comp_app">
-    <div class="jumbotron">
-      <div>
-        <h1>{{ aboutMessage }}
-          <small>Eine Demoseite</small>
-        </h1>
-      </div>
-      <div class="container">
-        <section>
-          <h2 id="about-title">{{ 'ABOUT.TITLE' | translate }}</h2>
-          <p id="about-subtitle">{{ 'ABOUT.SUBTITLE' | translate }}</p>
-          <button pButton type="button" id="change-to-german-button" (click)="changeLanguage('de')">Deutsch</button>
-          <button pButton type="button" id="change-to-english-button" (click)="changeLanguage('en')">English</button>
-          <button icon="fa-plus" pbutton="" type="button"
-                  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left"><span
-            class="ui-button-icon-left ui-c fa fa-fw fa-plus"></span><span class="ui-button-text ui-c">Testbutton</span>
-          </button>
-          <button class="ui-button ui-button-primary ui-widget ui-state-default ui-corner-all ui-button-text-only"
-                  label="Primary click" pbutton="" type="button"><span class="ui-button-text ui-c">Primary click</span>
-          </button>
-          <button class="btn btn-success" (click)="createMessages()">{{ 'ABOUT.NOTIFICATIONS' | translate }}</button>
-        </section>
-      </div>
-      <div class="container">
-        <section>
-          <h2>Per Http-Service geladene Posts</h2>
-          <p>Im Viewmodel sind {{ posts?.length }} Posts vorhanden</p>
+    <div class="container">
+        <div class="jumbotron">
+            <div>
+                <h1>{{ aboutMessage }}
+                    <small>Eine Demoseite</small>
+                </h1>
+            </div>
+            <div class="container">
+                <section>
+                    <h2 id="about-title">{{ 'ABOUT.TITLE' | translate }}</h2>
+                    <p id="about-subtitle">{{ 'ABOUT.SUBTITLE' | translate }}</p>
+                    <button pButton class="ui-button-primary" type="button" id="change-to-german-button"
+                            (click)="changeLanguage('de')"
+                            label="Deutsch"></button>
+                    <button pButton class="ui-button-secondary" type="button" id="change-to-english-button"
+                            (click)="changeLanguage('en')"
+                            label="English"></button>
+                    <button pButton class="ui-button-success" (click)="createMessages()"
+                            label="{{ 'ABOUT.NOTIFICATIONS' | translate }}">
+                    </button>
+                </section>
+            </div>
+            <div class="container">
+                <section>
+                    <h2>Per Http-Service geladene Posts</h2>
+                    <p>Im Viewmodel sind {{ posts?.length }} Posts vorhanden</p>
 
-          <p>Der erste Post hat den Titel: </p>
-          <pre>{{ posts ? posts[0].title : '' }}</pre>
-          <p>Der Post mit der Id {{ postById?.id }} hat den Titel:</p>
-          <pre>{{ postById?.title }}</pre>
-        </section>
-      </div>
+                    <p>Der erste Post hat den Titel: </p>
+                    <pre>{{ posts ? posts[0].title : '' }}</pre>
+                    <p>Der Post mit der Id {{ postById?.id }} hat den Titel:</p>
+                    <pre>{{ postById?.title }}</pre>
+                </section>
+            </div>
+        </div>
     </div>
-  </div>
 </main>
