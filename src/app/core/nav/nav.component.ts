@@ -15,7 +15,7 @@ interface NavItem {
 }
 
 @Component({
-    selector: 'sbb-navbar',
+    selector: 'app-navbar',
     templateUrl: './nav.component.html',
     styleUrls: ['./nav.component.css']
 })
