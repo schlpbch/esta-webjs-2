@@ -1,3 +1,4 @@
+import {Pipe, PipeTransform} from '@angular/core';
 /**
  * Copyright (C) Schweizerische Bundesbahnen SBB, 2017.
  *
@@ -7,15 +8,14 @@
  * @version: 2.0.0
  * @since 26.04.2017, 2017.
  */
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {PipeTransform, Pipe} from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
-import {XHRBackend, HttpModule} from "@angular/http";
-import {MockBackend} from "@angular/http/testing";
-import {NotificationsService} from "angular2-notifications";
-import {PostsService} from './posts.service';
+import {async, ComponentFixture, inject, TestBed} from '@angular/core/testing';
+import {HttpModule, XHRBackend} from '@angular/http';
+import {MockBackend} from '@angular/http/testing';
+import {TranslateService} from '@ngx-translate/core';
+import {NotificationsService} from 'angular2-notifications';
 import {Observable} from 'rxjs';
 import {AboutComponent} from './about.component';
+import {PostsService} from './posts.service';
 
 @Pipe({name: 'translate'})
 class MockPipe implements PipeTransform {
@@ -104,27 +104,30 @@ describe('AboutComponent', () => {
         expect(component.posts[1].title).toBe('hi 2');
     });
 
-    it('should call the notificationsService to display a success, info and an error message', () => {
-        spyOn(NotificationServiceMock.prototype, 'success')
-        spyOn(NotificationServiceMock.prototype, 'info')
-        spyOn(NotificationServiceMock.prototype, 'error')
+    it('should call the notificationsService to display a success, info and an error message',
+        inject([NotificationsService], (notificaitonsService: NotificationsService) => {
+            spyOn(notificaitonsService, 'success')
+            spyOn(notificaitonsService, 'info')
+            spyOn(notificaitonsService, 'error')
 
-        component.createMessages()
+            component.createMessages()
 
-        expect(NotificationServiceMock.prototype.success).toHaveBeenCalledWith('Erfolg', 'Ich bin eine Erfolgsmeldung')
-        expect(NotificationServiceMock.prototype.info).toHaveBeenCalledWith('Info', 'Ich bin eine Infomeldung')
-        expect(NotificationServiceMock.prototype.error).toHaveBeenCalledWith('Fehler', 'Ich bin eine Fehlermeldung')
-    });
+            expect(notificaitonsService.success).toHaveBeenCalledWith('Erfolg', 'Ich bin eine Erfolgsmeldung')
+            expect(notificaitonsService.info).toHaveBeenCalledWith('Info', 'Ich bin eine Infomeldung')
+            expect(notificaitonsService.error).toHaveBeenCalledWith('Fehler', 'Ich bin eine Fehlermeldung')
+        }));
 
     it('onInit should subscribe to PostsService [getPostById]', () => {
         component.ngOnInit();
         expect(component.postById.title).toBe('hi 4');
     });
 
-    it('should the translationService to change the language', () => {
-        const lang = 'de'
-        spyOn(TranslateServiceMock.prototype, 'use')
-        component.changeLanguage(lang)
-        expect(TranslateServiceMock.prototype.use).toHaveBeenCalled()
-    });
+    it('should the translationService to change the language',
+        inject([TranslateService], (translateService: TranslateService) => {
+            const lang = 'de';
+            spyOn(translateService, 'use');
+            component.changeLanguage(lang);
+            expect(translateService.use).toHaveBeenCalled();
+        })
+    );
 });
