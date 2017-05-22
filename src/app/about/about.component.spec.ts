@@ -29,8 +29,18 @@ describe('AboutComponent', () => {
     let fixture: ComponentFixture<AboutComponent>;
 
     class NotificationServiceMock {
+        public success() {
+        }
+
+        public info() {
+        }
+
+        public error() {
+        }
     }
     class TranslateServiceMock {
+        public use() {
+        }
     }
 
     class MockPostsService {
@@ -62,7 +72,7 @@ describe('AboutComponent', () => {
             declarations: [AboutComponent, MockPipe],
             providers: [{provide: XHRBackend, useClass: MockBackend},
                 {provide: NotificationsService, useClass: NotificationServiceMock},
-                {provide: TranslateService, useValue: TranslateServiceMock}
+                {provide: TranslateService, useClass: TranslateServiceMock}
             ]
         })
             .overrideComponent(AboutComponent, {
@@ -94,8 +104,27 @@ describe('AboutComponent', () => {
         expect(component.posts[1].title).toBe('hi 2');
     });
 
+    it('should call the notificationsService to display a success, info and an error message', () => {
+        spyOn(NotificationServiceMock.prototype, 'success')
+        spyOn(NotificationServiceMock.prototype, 'info')
+        spyOn(NotificationServiceMock.prototype, 'error')
+
+        component.createMessages()
+
+        expect(NotificationServiceMock.prototype.success).toHaveBeenCalledWith('Erfolg', 'Ich bin eine Erfolgsmeldung')
+        expect(NotificationServiceMock.prototype.info).toHaveBeenCalledWith('Info', 'Ich bin eine Infomeldung')
+        expect(NotificationServiceMock.prototype.error).toHaveBeenCalledWith('Fehler', 'Ich bin eine Fehlermeldung')
+    });
+
     it('onInit should subscribe to PostsService [getPostById]', () => {
         component.ngOnInit();
         expect(component.postById.title).toBe('hi 4');
+    });
+
+    it('should the translationService to change the language', () => {
+        const lang = 'de'
+        spyOn(TranslateServiceMock.prototype, 'use')
+        component.changeLanguage(lang)
+        expect(TranslateServiceMock.prototype.use).toHaveBeenCalled()
     });
 });
