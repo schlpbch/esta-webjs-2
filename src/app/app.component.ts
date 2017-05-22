@@ -8,7 +8,7 @@
  * @since 10.05.2017, 2017.
  */
 import {Component} from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: 'app-root',
