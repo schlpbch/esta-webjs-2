@@ -1,11 +1,11 @@
 /**
  * Copyright (C) Schweizerische Bundesbahnen SBB, 2017.
  *
- * ESTA WebJS: Unit-Tests AboutComponent
+ * ESTA WebJS: Unit-Test für den Import Guard
  *
  * @author u218609 (Kevin Kreuzer)
  * @version: 2.0.0
- * @since 26.04.2017, 2017.
+ * @since 23.05.2017, 2017.
  */
 import {throwIfAlreadyLoaded} from './module-import-guard'
 
