@@ -15,6 +15,7 @@ import {RouterModule} from '@angular/router';
 import {throwIfAlreadyLoaded} from './module-import-guard';
 
 import {NavComponent} from './nav/nav.component';
+import {HomeComponent} from './home/home.component';
 
 @NgModule({
     imports: [
@@ -22,7 +23,7 @@ import {NavComponent} from './nav/nav.component';
         HttpModule,
         RouterModule
     ],
-    declarations: [NavComponent],
+    declarations: [NavComponent, HomeComponent],
     exports: [NavComponent]
 })
 export class CoreModule {

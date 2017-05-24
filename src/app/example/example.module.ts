@@ -10,20 +10,14 @@
 import {NgModule} from '@angular/core';
 import {TranslateModule} from '@ngx-translate/core';
 import {AboutComponent} from './about/about.component';
-import {routing} from './example.routes';
-import {HomeComponent} from './home/home.component';
 import {ThemeComponent} from './theme/theme.component';
 
 @NgModule({
     declarations: [
-        HomeComponent,
         AboutComponent,
         ThemeComponent
     ],
-    imports: [
-        TranslateModule,
-        routing
-    ]
+    imports: [TranslateModule]
 })
 export class ExampleModule {
 }
