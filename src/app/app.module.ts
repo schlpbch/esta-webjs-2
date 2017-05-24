@@ -20,29 +20,9 @@ import {routing} from './app.routes';
 import {CoreModule} from './core/core.module';
 import {HomeComponent} from './home/home.component';
 import {ThemeComponent} from './theme/theme.component';
-import {
-    ButtonModule,
-    BreadcrumbModule,
-    MegaMenuModule,
-    MenuModule,
-    PanelMenuModule,
-    SelectButtonModule,
-    CalendarModule,
-    AutoCompleteModule,
-    SplitButtonModule,
-    DropdownModule,
-    RadioButtonModule,
-    InputTextareaModule,
-    InputTextModule,
-    ListboxModule,
-    PasswordModule,
-    PanelModule,
-    DataTableModule,
-    SharedModule,
-    TabMenuModule,
-    MessagesModule
-} from 'primeng/primeng';
 import {FormsModule} from '@angular/forms';
+import {primeModules} from './primeModules'
+
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -69,26 +49,7 @@ export function HttpLoaderFactory(http: Http) {
                 deps: [Http]
             }
         }),
-        ButtonModule,
-        BreadcrumbModule,
-        MegaMenuModule,
-        MenuModule,
-        PanelMenuModule,
-        SelectButtonModule,
-        CalendarModule,
-        AutoCompleteModule,
-        SplitButtonModule,
-        DropdownModule,
-        ListboxModule,
-        RadioButtonModule,
-        InputTextareaModule,
-        InputTextModule,
-        PasswordModule,
-        PanelModule,
-        DataTableModule,
-        SharedModule,
-        MessagesModule,
-        TabMenuModule,
+        ...primeModules,
         routing
     ],
     providers: [],
