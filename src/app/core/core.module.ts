@@ -19,7 +19,6 @@ import {NavComponent} from './nav/nav.component';
 @NgModule({
     imports: [
         CommonModule,
-        FormsModule,
         HttpModule,
         RouterModule
     ],
