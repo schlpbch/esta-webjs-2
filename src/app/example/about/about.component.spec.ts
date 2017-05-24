@@ -8,7 +8,6 @@
  * @since 26.04.2017, 2017.
  */
 import {Pipe, PipeTransform} from '@angular/core';
-
 import {async, ComponentFixture, inject, TestBed} from '@angular/core/testing';
 import {HttpModule, XHRBackend} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
