@@ -8,6 +8,7 @@
  * @since 24.05.2017, 2017.
  */
 import {NgModule} from '@angular/core';
+import {HttpModule} from '@angular/http';
 import {TranslateModule} from '@ngx-translate/core';
 import {AboutComponent} from './about/about.component';
 import {ThemeComponent} from './theme/theme.component';
@@ -17,7 +18,10 @@ import {ThemeComponent} from './theme/theme.component';
         AboutComponent,
         ThemeComponent
     ],
-    imports: [TranslateModule]
+    imports: [
+        HttpModule,
+        TranslateModule
+    ]
 })
 export class ExampleModule {
 }
