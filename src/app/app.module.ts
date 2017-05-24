@@ -42,7 +42,6 @@ export function HttpLoaderFactory(http: Http) {
         }),
         routing
     ],
-    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {
