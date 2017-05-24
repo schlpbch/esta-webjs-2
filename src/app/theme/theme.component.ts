@@ -20,6 +20,7 @@ export class ThemeComponent implements OnInit {
 
     public bootstrapDocumentationUrl = 'https://v4-alpha.getbootstrap.com/components';
     private msgs: Message[] = [];
+    private tabMenuItems: MenuItem[];
     private breadCrumbItems: MenuItem[];
     private megaMenuItems: MenuItem[];
     private contextMenuItems: MenuItem[];
@@ -51,6 +52,17 @@ export class ThemeComponent implements OnInit {
         this.createSplitMenuItems();
         this.createListBoxOptions();
         this.createCars();
+        this.createTabMenuItems();
+    }
+
+    private createTabMenuItems(){
+        this.tabMenuItems = [
+            {label: 'Stats', icon: 'fa-bar-chart'},
+            {label: 'Calendar', icon: 'fa-calendar'},
+            {label: 'Documentation', icon: 'fa-book'},
+            {label: 'Support', icon: 'fa-support'},
+            {label: 'Social', icon: 'fa-twitter'}
+        ];
     }
 
     private createCars(){

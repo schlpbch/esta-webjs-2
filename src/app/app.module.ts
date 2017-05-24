@@ -39,6 +39,7 @@ import {
     PanelModule,
     DataTableModule,
     SharedModule,
+    TabMenuModule,
     MessagesModule
 } from 'primeng/primeng';
 import {FormsModule} from '@angular/forms';
@@ -87,6 +88,7 @@ export function HttpLoaderFactory(http: Http) {
         DataTableModule,
         SharedModule,
         MessagesModule,
+        TabMenuModule,
         routing
     ],
     providers: [],
