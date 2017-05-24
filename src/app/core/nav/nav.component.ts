@@ -18,7 +18,7 @@ import {MenuItem} from "primeng/primeng";
 export class NavComponent {
 
   public navItems: Array<MenuItem> = [
-    {label: 'Home', routerLink: ['']},
+    {label: 'Home', routerLink: ['/']},
     {label: 'About', routerLink: ['about']},
     {label: 'Theme', routerLink: ['theme']}
   ]

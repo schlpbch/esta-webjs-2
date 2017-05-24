@@ -1,0 +1,21 @@
+/*
+.comp_app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100%;
+
+  .header {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: calc(100% - 5em - 1px);
+    overflow: hidden;
+  }
+}
+*/

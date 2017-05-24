@@ -14,14 +14,34 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {SimpleNotificationsModule} from 'angular2-notifications';
-
 import {AboutComponent} from './about/about.component';
 import {AppComponent} from './app.component';
 import {routing} from './app.routes';
 import {CoreModule} from './core/core.module';
 import {HomeComponent} from './home/home.component';
 import {ThemeComponent} from './theme/theme.component';
-import {ButtonModule} from 'primeng/primeng';
+import {
+    ButtonModule,
+    BreadcrumbModule,
+    MegaMenuModule,
+    MenuModule,
+    PanelMenuModule,
+    SelectButtonModule,
+    CalendarModule,
+    AutoCompleteModule,
+    SplitButtonModule,
+    DropdownModule,
+    RadioButtonModule,
+    InputTextareaModule,
+    InputTextModule,
+    ListboxModule,
+    PasswordModule,
+    PanelModule,
+    DataTableModule,
+    SharedModule,
+    MessagesModule
+} from 'primeng/primeng';
+import {FormsModule} from '@angular/forms';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -37,6 +57,7 @@ export function HttpLoaderFactory(http: Http) {
     ],
     imports: [
         BrowserModule,
+        FormsModule,
         CoreModule,
         NgbModule.forRoot(),
         SimpleNotificationsModule.forRoot(),
@@ -48,6 +69,24 @@ export function HttpLoaderFactory(http: Http) {
             }
         }),
         ButtonModule,
+        BreadcrumbModule,
+        MegaMenuModule,
+        MenuModule,
+        PanelMenuModule,
+        SelectButtonModule,
+        CalendarModule,
+        AutoCompleteModule,
+        SplitButtonModule,
+        DropdownModule,
+        ListboxModule,
+        RadioButtonModule,
+        InputTextareaModule,
+        InputTextModule,
+        PasswordModule,
+        PanelModule,
+        DataTableModule,
+        SharedModule,
+        MessagesModule,
         routing
     ],
     providers: [],
