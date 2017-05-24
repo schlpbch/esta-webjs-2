@@ -9,13 +9,12 @@
  */
 import {CommonModule} from '@angular/common';
 import {NgModule, Optional, SkipSelf} from '@angular/core';
-import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
+import {HomeComponent} from './home/home.component';
 import {throwIfAlreadyLoaded} from './module-import-guard';
 
 import {NavComponent} from './nav/nav.component';
-import {HomeComponent} from './home/home.component';
 
 @NgModule({
     imports: [
