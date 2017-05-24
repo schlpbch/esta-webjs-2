@@ -7,10 +7,10 @@
  * @version: 2.0.0
  * @since 10.05.2017, 2017.
  */
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PostsService} from './posts.service';
-import {NotificationsService} from "angular2-notifications";
-import {TranslateService} from "@ngx-translate/core";
+import {NotificationsService} from 'angular2-notifications';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
