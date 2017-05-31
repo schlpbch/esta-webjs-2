@@ -26,7 +26,9 @@ describe('ThemeComponent', () => {
         fixture.detectChanges();
     });
 
+    /*
     it('should have a property with the bootstrap docu Url', () => {
         expect(component.bootstrapDocumentationUrl).toBe('https://v4-alpha.getbootstrap.com/components');
     });
+    */
 });

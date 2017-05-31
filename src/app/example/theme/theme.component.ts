@@ -15,7 +15,6 @@ import {MenuService} from './theme-services/menu.service';
 @Component({
     selector: 'app-theme',
     templateUrl: './theme.component.html',
-    styleUrls: ['./theme.component.css'],
     providers: [
         BreadCrumbService,
         MenuService
@@ -28,6 +27,7 @@ export class ThemeComponent implements OnInit {
     private menuItems: Array<MenuItem>;
     private panelMenuItems: Array<MenuItem>;
     private megaMenuItems: Array<MenuItem>;
+    private tabMenuItems: Array<MenuItem>;
 
     constructor(private breadCrumbService: BreadCrumbService,
                 private menuService: MenuService) {
@@ -38,6 +38,7 @@ export class ThemeComponent implements OnInit {
         this.menuItems = this.menuService.getMenuItems();
         this.panelMenuItems = this.menuService.getPanelMenuItems();
         this.megaMenuItems = this.menuService.getMegaMenuItems();
+        this.tabMenuItems = this.menuService.getTabMenuItems();
     }
 
 }

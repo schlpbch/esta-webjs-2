@@ -16,11 +16,23 @@ export class MenuService {
     private menuItems: MenuItem[];
     private panelMenuItems: MenuItem[];
     private megaMenuItems: MenuItem[];
+    private tabMenuItems: MenuItem[];
 
     constructor() {
         this.menuItems = this.createMenuItems();
         this.panelMenuItems = this.createPanelMenuItems();
         this.megaMenuItems = this.createMegaMenuItems()
+        this.tabMenuItems = this.createTabMenuItems();
+    }
+
+    private createTabMenuItems(): Array<MenuItem> {
+        return [
+            {label: 'Stats', icon: 'fa-bar-chart'},
+            {label: 'Calendar', icon: 'fa-calendar'},
+            {label: 'Documentation', icon: 'fa-book'},
+            {label: 'Support', icon: 'fa-support'},
+            {label: 'Social', icon: 'fa-twitter'}
+        ];
     }
 
     private createMegaMenuItems(): Array<MenuItem> {
@@ -191,5 +203,9 @@ export class MenuService {
 
     public getMegaMenuItems(): Array<MenuItem> {
         return this.megaMenuItems;
+    }
+
+    public getTabMenuItems(): Array<MenuItem> {
+        return this.tabMenuItems;
     }
 }

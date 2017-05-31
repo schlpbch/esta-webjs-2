@@ -12,7 +12,8 @@ import {
     ButtonModule,
     MenuModule,
     PanelMenuModule,
-    MegaMenuModule
+    MegaMenuModule,
+    TabMenuModule
 } from 'primeng/primeng';
 
 
@@ -21,5 +22,6 @@ export const primeModules = [
     ButtonModule,
     MenuModule,
     PanelMenuModule,
-    MegaMenuModule
+    MegaMenuModule,
+    TabMenuModule
 ];
