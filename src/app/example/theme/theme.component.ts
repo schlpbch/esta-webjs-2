@@ -26,7 +26,8 @@ export class ThemeComponent implements OnInit {
     public primengBaseDocumentationUrl = 'https://www.primefaces.org/primeng/#/';
     private breadCrumbItems: Array<MenuItem>;
     private menuItems: Array<MenuItem>;
-    private panelmenuItems: Array<MenuItem>;
+    private panelMenuItems: Array<MenuItem>;
+    private megaMenuItems: Array<MenuItem>;
 
     constructor(private breadCrumbService: BreadCrumbService,
                 private menuService: MenuService) {
@@ -35,7 +36,8 @@ export class ThemeComponent implements OnInit {
     ngOnInit() {
         this.breadCrumbItems = this.breadCrumbService.getBreadCrumbItems();
         this.menuItems = this.menuService.getMenuItems();
-        this.panelmenuItems = this.menuService.getPanelMenuItems();
+        this.panelMenuItems = this.menuService.getPanelMenuItems();
+        this.megaMenuItems = this.menuService.getMegaMenuItems();
     }
 
 }

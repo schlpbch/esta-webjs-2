@@ -7,12 +7,19 @@
  * @version: 2.0.0
  * @since 31.05.2017, 2017.
  */
-import {BreadcrumbModule, ButtonModule, MenuModule, PanelMenuModule} from 'primeng/primeng';
+import {
+    BreadcrumbModule,
+    ButtonModule,
+    MenuModule,
+    PanelMenuModule,
+    MegaMenuModule
+} from 'primeng/primeng';
 
 
 export const primeModules = [
     BreadcrumbModule,
     ButtonModule,
     MenuModule,
-    PanelMenuModule
+    PanelMenuModule,
+    MegaMenuModule
 ];
