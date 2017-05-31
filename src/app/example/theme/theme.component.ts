@@ -10,7 +10,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Validators, FormControl, FormGroup, FormBuilder} from '@angular/forms';
 import {BreadCrumbService} from './theme-services/breadcrumb.service';
-import {MenuItem, SelectItem} from 'primeng/primeng';
+import {MenuItem, Message, SelectItem} from 'primeng/primeng';
 import {ButtonService} from './theme-services/button.service';
 import {TableService} from './theme-services/table.service';
 
@@ -34,6 +34,7 @@ export class ThemeComponent implements OnInit {
     private fb: FormBuilder;
     private userform: FormGroup;
     private genders: SelectItem[];
+    private msgs: Message[] = [];
 
     constructor(private breadCrumbService: BreadCrumbService,
                 private buttonService: ButtonService,
@@ -67,5 +68,36 @@ export class ThemeComponent implements OnInit {
 
     onSubmit(formValue): void {
         console.log('You submitted', formValue);
+    }
+
+    showSuccess() {
+        this.msgs = [];
+        this.msgs.push({severity:'success', summary:'Success Message', detail:'PrimeNG rocks'});
+    }
+
+    showInfo() {
+        this.msgs = [];
+        this.msgs.push({severity:'info', summary:'Info Message', detail:'PrimeNG rocks'});
+    }
+
+    showWarn() {
+        this.msgs = [];
+        this.msgs.push({severity:'warn', summary:'Warn Message', detail:'There are unsaved changes'});
+    }
+
+    showError() {
+        this.msgs = [];
+        this.msgs.push({severity:'error', summary:'Error Message', detail:'Validation failed'});
+    }
+
+    showMultiple() {
+        this.msgs = [];
+        this.msgs.push({severity:'info', summary:'Message 1', detail:'PrimeNG rocks'});
+        this.msgs.push({severity:'info', summary:'Message 2', detail:'PrimeUI rocks'});
+        this.msgs.push({severity:'info', summary:'Message 3', detail:'PrimeFaces rocks'});
+    }
+
+    clear(){
+        this.msgs = [];
     }
 }
