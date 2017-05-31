@@ -87,5 +87,41 @@
             </div>
         </div>
     </p-panel>
-
+    <p-panel>
+        <p-header>
+            <h1>Masks
+                <a target="_blank" href="{{primengBaseDocumentationUrl}}/inputmask">
+                    <small>(Docs)</small>
+                </a>
+            </h1>
+        </p-header>
+        <div>
+            <div>
+                <span>Basic</span>
+                <p-inputMask mask="99-999999" [(ngModel)]="val1" placeholder="99-999999"></p-inputMask>
+            </div>
+            <div>
+                <span>SSN</span>
+                <p-inputMask mask="999-99-9999" [(ngModel)]="val2" placeholder="999-99-9999"></p-inputMask>
+            </div>
+            <div>
+                <span>Date</span>
+                <p-inputMask mask="99/99/9999" [(ngModel)]="val3" placeholder="99/99/9999"
+                             slotChar="mm/dd/yyyy"></p-inputMask>
+            </div>
+            <div>
+                <span>Phone</span>
+                <p-inputMask mask="(999) 999 99 99" [(ngModel)]="val4" placeholder="(999) 999-9999"></p-inputMask>
+            </div>
+            <div>
+                <span>Phone Ext</span>
+                <p-inputMask mask="(999) 999 99 99? x99999" [(ngModel)]="val5"
+                             placeholder="(999) 999-9999? x99999"></p-inputMask>
+            </div>
+            <div>
+                <span>Serial Number</span>
+                <p-inputMask mask="a*-999-a999" [(ngModel)]="val6" placeholder="a*-999-a999"></p-inputMask>
+            </div>
+        </div>
+    </p-panel>
 </main>
