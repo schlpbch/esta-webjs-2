@@ -7,7 +7,10 @@
  * @version: 2.0.0
  * @since 31.05.2017, 2017.
  */
-import {ButtonModule} from 'primeng/primeng';
+import {BreadcrumbModule, ButtonModule} from 'primeng/primeng';
 
 
-export const primeModules = [ButtonModule];
+export const primeModules = [
+    BreadcrumbModule,
+    ButtonModule
+];

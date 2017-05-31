@@ -7,20 +7,28 @@
  * @version: 2.0.0
  * @since 10.05.2017, 2017.
  */
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {BreadCrumbService} from './theme-services/breadcrumb.service';
+import {MenuItem} from 'primeng/primeng';
 
 @Component({
-  selector: 'app-theme',
-  templateUrl: './theme.component.html',
-  styleUrls: ['./theme.component.css']
+    selector: 'app-theme',
+    templateUrl: './theme.component.html',
+    styleUrls: ['./theme.component.css'],
+    providers: [
+        BreadCrumbService
+    ]
 })
 export class ThemeComponent implements OnInit {
 
-  public bootstrapDocumentationUrl = 'https://v4-alpha.getbootstrap.com/components';
+    public primengBaseDocumentationUrl = 'https://www.primefaces.org/primeng/#/';
+    private breadCrumbItems: Array<MenuItem>;
 
-  constructor() { }
+    constructor(private breadCrumbService: BreadCrumbService) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.breadCrumbItems = this.breadCrumbService.getBreadCrumbItems();
+    }
 
 }
