@@ -45,11 +45,46 @@
             <p-splitButton label="Save" icon="fa-check" [model]="splitButtonItems"></p-splitButton>
         </div>
         <div>
-            <h3>Select Buttons
-                <a target="_blank" href="{{primengBaseDocumentationUrl}}/selectbutton">
+            <h3>Radio Buttons
+                <a target="_blank" href="{{primengBaseDocumentationUrl}}/radiobutton">
                     <small>(Docs)</small>
                 </a>
             </h3>
+            <div style="width:250px;margin-bottom:10px">
+                <div>
+                    <p-radioButton name="group1" value="Option 1" label="Option 1"
+                                   [(ngModel)]="radioValue"></p-radioButton>
+                </div>
+                <div>
+                    <p-radioButton name="group1" value="Option 2" label="Option 2"
+                                   [(ngModel)]="radioValue"></p-radioButton>
+                </div>
+                <div>
+                    <p-radioButton name="group1" value="Option 3" label="Option 3"
+                                   [(ngModel)]="radioValue"></p-radioButton>
+                </div>
+            </div>
+            <div>
+                <h3>Toggle Button
+                    <a target="_blank" href="{{primengBaseDocumentationUrl}}/togglebutton">
+                        <small>(Docs)</small>
+                    </a>
+                </h3>
+                <h5 class="first">Basic - ({{checked1}})</h5>
+                <p-toggleButton [(ngModel)]="checked1" [style]="{'width':'150px'}"></p-toggleButton>
+
+                <h5>Customized - ({{checked2}})</h5>
+                <p-toggleButton [(ngModel)]="checked2" onLabel="I confirm" offLabel="I reject" onIcon="fa-check-square"
+                                offIcon="fa-square" [style]="{'width':'150px'}"></p-toggleButton>
+            </div>
+            <div>
+                <h3>Select Button
+                    <a target="_blank" href="{{primengBaseDocumentationUrl}}/selectbutton">
+                        <small>(Docs)</small>
+                    </a>
+                </h3>
+                <p-selectButton [options]="selectButtonItems" [(ngModel)]="selectedButtonItem"></p-selectButton>
+            </div>
         </div>
     </p-panel>
 

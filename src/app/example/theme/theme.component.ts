@@ -9,7 +9,7 @@
  */
 import {Component, OnInit} from '@angular/core';
 import {BreadCrumbService} from './theme-services/breadcrumb.service';
-import {MenuItem} from 'primeng/primeng';
+import {MenuItem, SelectItem} from 'primeng/primeng';
 import {ButtonService} from './theme-services/button.service';
 
 @Component({
@@ -25,6 +25,7 @@ export class ThemeComponent implements OnInit {
     public primengBaseDocumentationUrl = 'https://www.primefaces.org/primeng/#/';
     private breadCrumbItems: Array<MenuItem>;
     private splitButtonItems: Array<MenuItem>;
+    private selectButtonItems: Array<SelectItem>;
 
     constructor(private breadCrumbService: BreadCrumbService,
                 private buttonService: ButtonService) {
@@ -33,5 +34,6 @@ export class ThemeComponent implements OnInit {
     ngOnInit() {
         this.breadCrumbItems = this.breadCrumbService.getBreadCrumbItems();
         this.splitButtonItems = this.buttonService.getSplitButtonItems();
+        this.selectButtonItems = this.buttonService.getSelectButtonItems();
     }
 }

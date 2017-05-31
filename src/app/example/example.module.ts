@@ -14,6 +14,7 @@ import {AboutComponent} from './about/about.component';
 import {ThemeComponent} from './theme/theme.component';
 import {primeModules} from './prime.modules';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ],
     imports: [
         HttpModule,
+        FormsModule,
         TranslateModule,
         BrowserAnimationsModule,
         ...primeModules

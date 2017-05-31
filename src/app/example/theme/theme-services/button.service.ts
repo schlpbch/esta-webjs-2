@@ -8,15 +8,27 @@
  * @since 31.05.2017, 2017.
  */
 import {Injectable} from '@angular/core';
-import {MenuItem} from 'primeng/primeng';
+import {MenuItem, SelectItem} from 'primeng/primeng';
 
 @Injectable()
 export class ButtonService {
 
     private splitButtonItems: MenuItem[];
+    private selectButtonItems: SelectItem[];
 
     constructor() {
         this.splitButtonItems = this.createSplitButtonItems();
+        this.selectButtonItems = this.createSelectButtonItems();
+    }
+
+    private createSelectButtonItems(): Array<SelectItem> {
+        let cities = [];
+        cities.push({label: 'New York', value: 'New York'});
+        cities.push({label: 'Rome', value: 'Rome'});
+        cities.push({label: 'London', value: 'London'});
+        cities.push({label: 'Istanbul', value: 'Istanbul'});
+        cities.push({label: 'Paris', value: 'Paris'});
+        return cities;
     }
 
     private createSplitButtonItems(): Array<MenuItem> {
@@ -30,5 +42,9 @@ export class ButtonService {
 
     public getSplitButtonItems(): Array<MenuItem> {
         return this.splitButtonItems;
+    }
+
+    public getSelectButtonItems(): Array<SelectItem> {
+        return this.selectButtonItems;
     }
 }
