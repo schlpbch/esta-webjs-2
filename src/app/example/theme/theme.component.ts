@@ -8,6 +8,7 @@
  * @since 10.05.2017, 2017.
  */
 import {Component, OnInit} from '@angular/core';
+import {Validators, FormControl, FormGroup, FormBuilder} from '@angular/forms';
 import {BreadCrumbService} from './theme-services/breadcrumb.service';
 import {MenuItem, SelectItem} from 'primeng/primeng';
 import {ButtonService} from './theme-services/button.service';
@@ -26,14 +27,38 @@ export class ThemeComponent implements OnInit {
     private breadCrumbItems: Array<MenuItem>;
     private splitButtonItems: Array<MenuItem>;
     private selectButtonItems: Array<SelectItem>;
+    private fb: FormBuilder;
+    private userform: FormGroup;
+    private genders: SelectItem[];
 
     constructor(private breadCrumbService: BreadCrumbService,
                 private buttonService: ButtonService) {
+        this.fb = new FormBuilder();
     }
 
     ngOnInit() {
         this.breadCrumbItems = this.breadCrumbService.getBreadCrumbItems();
         this.splitButtonItems = this.buttonService.getSplitButtonItems();
         this.selectButtonItems = this.buttonService.getSelectButtonItems();
+        this.initUserForm();
+    }
+
+    initUserForm() {
+        this.userform = this.fb.group({
+            'firstname': new FormControl('', Validators.required),
+            'lastname': new FormControl('', Validators.required),
+            'password': new FormControl('', Validators.compose([Validators.required, Validators.minLength(6)])),
+            'description': new FormControl(''),
+            'gender': new FormControl('', Validators.required)
+        });
+
+        this.genders = [];
+        this.genders.push({label: 'Select Gender', value: ''});
+        this.genders.push({label: 'Male', value: 'Male'});
+        this.genders.push({label: 'Female', value: 'Female'});
+    }
+
+    onSubmit(formValue): void {
+        console.log('You submitted', formValue);
     }
 }

@@ -15,6 +15,7 @@ import {
     ToggleButtonModule,
     SelectButtonModule,
     InputMaskModule,
+    DropdownModule,
     PanelModule,
 } from 'primeng/primeng';
 
@@ -27,5 +28,6 @@ export const primeModules = [
     ToggleButtonModule,
     SelectButtonModule,
     InputMaskModule,
+    DropdownModule,
     PanelModule
 ];
