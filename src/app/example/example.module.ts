@@ -12,6 +12,7 @@ import {HttpModule} from '@angular/http';
 import {TranslateModule} from '@ngx-translate/core';
 import {AboutComponent} from './about/about.component';
 import {ThemeComponent} from './theme/theme.component';
+import {primeModules} from './prime.modules';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import {ThemeComponent} from './theme/theme.component';
     ],
     imports: [
         HttpModule,
-        TranslateModule
+        TranslateModule,
+        ...primeModules
     ]
 })
 export class ExampleModule {

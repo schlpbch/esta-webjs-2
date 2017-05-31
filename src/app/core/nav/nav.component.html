@@ -1,4 +1,8 @@
 <div class="comp_header">
+    <span *ngFor="let navItem of navItems">
+        <a class="nav-link" [routerLink]="[navItem.routerLink]" routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact: true}">{{ navItem.displayName }}</a>
+    </span>
     <svg class="logo" viewBox="0 0 187 21" xmlns="http://www.w3.org/2000/svg" itemprop="logo">
         <title translate>headerComponent.logotitle</title>
         <path

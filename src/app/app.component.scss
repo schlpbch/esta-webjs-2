@@ -16,5 +16,6 @@
     /* 5em: height of header. 1px: border between header and content */
     height: calc(100% - 5em - 1px);
     overflow: hidden;
+    padding: 15px;
   }
 }
