@@ -13,6 +13,7 @@ import {TranslateModule} from '@ngx-translate/core';
 import {AboutComponent} from './about/about.component';
 import {ThemeComponent} from './theme/theme.component';
 import {primeModules} from './prime.modules';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import {primeModules} from './prime.modules';
     imports: [
         HttpModule,
         TranslateModule,
+        BrowserAnimationsModule,
         ...primeModules
     ]
 })

@@ -10,25 +10,32 @@
 import {Component, OnInit} from '@angular/core';
 import {BreadCrumbService} from './theme-services/breadcrumb.service';
 import {MenuItem} from 'primeng/primeng';
+import {MenuService} from './theme-services/menu.service';
 
 @Component({
     selector: 'app-theme',
     templateUrl: './theme.component.html',
     styleUrls: ['./theme.component.css'],
     providers: [
-        BreadCrumbService
+        BreadCrumbService,
+        MenuService
     ]
 })
 export class ThemeComponent implements OnInit {
 
     public primengBaseDocumentationUrl = 'https://www.primefaces.org/primeng/#/';
     private breadCrumbItems: Array<MenuItem>;
+    private menuItems: Array<MenuItem>;
+    private panelmenuItems: Array<MenuItem>;
 
-    constructor(private breadCrumbService: BreadCrumbService) {
+    constructor(private breadCrumbService: BreadCrumbService,
+                private menuService: MenuService) {
     }
 
     ngOnInit() {
         this.breadCrumbItems = this.breadCrumbService.getBreadCrumbItems();
+        this.menuItems = this.menuService.getMenuItems();
+        this.panelmenuItems = this.menuService.getPanelMenuItems();
     }
 
 }
