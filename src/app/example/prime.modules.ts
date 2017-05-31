@@ -21,6 +21,7 @@ import {
     DataTableModule,
     SharedModule,
     MessagesModule,
+    GrowlModule,
     PanelModule,
 } from 'primeng/primeng';
 
@@ -39,5 +40,6 @@ export const primeModules = [
     DataTableModule,
     SharedModule,
     MessagesModule,
+    GrowlModule,
     PanelModule
 ];

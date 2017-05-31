@@ -10,6 +10,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PostsService} from './posts.service';
 import {TranslateService} from '@ngx-translate/core';
+import {Message} from 'primeng/primeng';
 
 @Component({
     selector: 'app-about',
@@ -17,9 +18,10 @@ import {TranslateService} from '@ngx-translate/core';
     providers: [PostsService]
 })
 export class AboutComponent implements OnInit {
-    aboutMessage: string;
-    posts: any[];
-    postById: any;
+    private aboutMessage: string;
+    private posts: any[];
+    private postById: any;
+    private messages: Array<Message> = [];
 
     constructor(private postsService: PostsService,
                 private translateService: TranslateService) {
@@ -33,11 +35,9 @@ export class AboutComponent implements OnInit {
     }
 
     createMessages() {
-        /*
-         this.notificationService.success('Erfolg', 'Ich bin eine Erfolgsmeldung');
-         this.notificationService.info('Info', 'Ich bin eine Infomeldung');
-         this.notificationService.error('Fehler', 'Ich bin eine Fehlermeldung');
-         */
+        this.messages.push({severity: 'info', summary: 'Info Message', detail: 'PrimeNG rocks'});
+        this.messages.push({severity: 'warn', summary: 'Warn Message', detail: 'There are unsaved changes'});
+        this.messages.push({severity: 'error', summary: 'Error Message', detail: 'Validation failed'});
     }
 
     changeLanguage(lang) {

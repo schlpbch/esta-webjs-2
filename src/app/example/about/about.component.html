@@ -1,4 +1,5 @@
 <main>
+    <p-growl [(value)]="messages" sticky="sticky"></p-growl>
     <h1>{{ aboutMessage }}
         <small>Eine Demoseite</small>
     </h1>
@@ -10,7 +11,7 @@
         <button pButton type="button" class="ui-button-secondary" label="{{ 'ABOUT.ENGLISH' | translate }}"
                 (click)="changeLanguage('en')">
         </button>
-        <button pButton type="button" class="ui-button-success"
+        <button pButton type="button" class="ui-button-success" (click)="createMessages()"
                 label="{{ 'ABOUT.NOTIFICATIONS' | translate }}"></button>
     </section>
     <section>
