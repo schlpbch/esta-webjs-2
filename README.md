@@ -1,14 +1,43 @@
 # ESTA WebJS 2
-ESTA WebJS is a development stack for web applications with AngularJS 2, written in TypeScript and bundled with webpack 2.
+ESTA WebJS 2 is a development stack for web applications based on angular/cli. It adds the integration to our environment:
 
-## Features
-* AngularJS 2 with TypeScript and Webpack 2
-* Yeoman based generator for fast project startup
-* Build system using maven > gulp > webpack
-* Test setup using karma & jasmine on PhantomJS and Selenium Webgrid. Results are sent to SonarQube
-* Docker base-image to run the application in nginx within a docker container on OpenShift.
+* Jenkins
+* SonarQube including coverage
+* Unit & E2E Tests on Selenium Webgrid
+* Local Unit Tests are running on a headless browser instead of chrome
+* Docker based image to run the application in nginx within a container on OpenShift.
 
 ## Credits to
-* [AngularClass](https://github.com/angularclass/angular2-webpack-starter)
+* https://github.com/angular/angular-cli
 
-## TODO: Continue Docs
+## How to use
+* Clone this repository
+* Change the following settings:
+
+### pom.xml
+Enter your own data:
+```xml
+<groupId>ch.sbb.esta.webjs</groupId>
+<artifactId>esta-webjs-2-starterkit</artifactId>
+<version>2.0.0-SNAPSHOT</version>
+ 
+<distributionManagement>
+    <repository>
+      <id>hosted.esta-webjs.releases</id>
+      <url>...deine URL...</url>
+    </repository>
+    <snapshotRepository>
+      <id>hosted.esta-webjs.snapshots</id>
+      <url>...deine URL...</url>
+    </snapshotRepository>
+</distributionManagement>
+```
+
+### package.json
+Enter your own data. Also Version and Authors...   
+```json
+{"name": "webjs-starterkit"}
+```
+
+### docker/Dockerfile
+Change all the names and the point where your artifacts come from 
