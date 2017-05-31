@@ -14,25 +14,30 @@ ESTA WebJS 2 is a development stack for web applications based on angular/cli. I
 * Clone this repository
 * Change the following settings:
 
-| File              | Things to change                                                  | 
-|-------------------|-------------------------------------------------------------------| 
-| pom.xml           | Enter your own data:                                              | 
-|                   | <groupId>ch.sbb.esta.webjs</groupId>                              | 
-|                   | <artifactId>esta-webjs-2-starterkit</artifactId>                  | 
-|                   | <version>2.0.0-SNAPSHOT</version>                                 | 
-|                   |                                                                   |
-|                   | <distributionManagement>                                          | 
-|                   |     <repository>                                                  | 
-|                   |       <id>hosted.esta-webjs.releases</id>                         | 
-|                   |       <url>...your url...</url>                                   | 
-|                   |     </repository>                                                 | 
-|                   |     <snapshotRepository>                                          | 
-|                   |       <id>hosted.esta-webjs.snapshots</id>                        | 
-|                   |       <url>...your url...</url>                                   | 
-|                   |     </snapshotRepository>                                         | 
-|                   |   </distributionManagement>                                       | 
-| package.json      | Enter your own data:                                              | 
-|                   | "name": "webjs-starterkit"                                        | 
-|                   | also Version and Authors...                                       | 
-| docker/Dockerfile | Change all the names and the point where your artifacts come from | 
+### pom.xml
+Enter your own data:
+```xml
+<groupId>ch.sbb.esta.webjs</groupId>
+<artifactId>esta-webjs-2-starterkit</artifactId>
+<version>2.0.0-SNAPSHOT</version>
+ 
+<distributionManagement>
+    <repository>
+      <id>hosted.esta-webjs.releases</id>
+      <url>...deine URL...</url>
+    </repository>
+    <snapshotRepository>
+      <id>hosted.esta-webjs.snapshots</id>
+      <url>...deine URL...</url>
+    </snapshotRepository>
+  </distributionManagement>
+```
 
+### package.json
+Enter your own data. Also Version and Authors...   
+```json
+{"name": "webjs-starterkit"}
+```
+
+### docker/Dockerfile\
+Change all the names and the point where your artifacts come from 
