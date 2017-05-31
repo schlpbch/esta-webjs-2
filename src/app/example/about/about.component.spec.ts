@@ -12,7 +12,6 @@ import {async, ComponentFixture, inject, TestBed} from '@angular/core/testing';
 import {HttpModule, XHRBackend} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 import {TranslateService} from '@ngx-translate/core';
-import {NotificationsService} from 'angular2-notifications';
 import {Observable} from 'rxjs';
 import {AboutComponent} from './about.component';
 import {PostsService} from './posts.service';
@@ -71,7 +70,6 @@ describe('AboutComponent', () => {
             imports: [HttpModule],
             declarations: [AboutComponent, MockPipe],
             providers: [{provide: XHRBackend, useClass: MockBackend},
-                {provide: NotificationsService, useClass: NotificationServiceMock},
                 {provide: TranslateService, useClass: TranslateServiceMock}
             ]
         })
@@ -104,6 +102,7 @@ describe('AboutComponent', () => {
         expect(component.posts[1].title).toBe('hi 2');
     });
 
+    /*
     it('should call the notificationsService to display a success, info and an error message',
         inject([NotificationsService], (notificaitonsService: NotificationsService) => {
             spyOn(notificaitonsService, 'success')
@@ -116,6 +115,7 @@ describe('AboutComponent', () => {
             expect(notificaitonsService.info).toHaveBeenCalledWith('Info', 'Ich bin eine Infomeldung')
             expect(notificaitonsService.error).toHaveBeenCalledWith('Fehler', 'Ich bin eine Fehlermeldung')
         }));
+        */
 
     it('onInit should subscribe to PostsService [getPostById]', () => {
         component.ngOnInit();

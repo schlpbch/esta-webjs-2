@@ -1,0 +1,8 @@
+/* Obacht: Die Reihenfolge der Imports ist relevant und darf nicht geändert werden. */
+@import '../node_modules/primeng/resources/primeng.css';
+@import 'style/sbb-fonts';
+@import 'style/sbb-colors';
+@import 'style/app-variables';
+@import 'style/app-style';
+@import '../node_modules/primeng/resources/themes/theme';
+@import 'style/app-overrides';

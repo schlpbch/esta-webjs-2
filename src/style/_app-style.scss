@@ -1,0 +1,82 @@
+@import 'app-variables';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: $fontFamily;
+  font-size: 15px;
+}
+
+h1, h2 {
+  font-family: 'SBBWeb Thin', Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'SBBWeb Regular', Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.47rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+.ui-button.ui-state-default,
+.ui-widget-content .ui-button.ui-state-default {
+  border-color: $sbb-black-20;
+  background-color: $sbb-black-20;
+
+  .ui-button-text {
+    color: $sbb-black-90;
+  }
+
+  &:enabled:hover,
+  &:focus {
+    border-color: $sbb-black-30;
+    background-color: $sbb-black-30;
+  }
+}
+
+.ui-button.ui-button-primary.ui-state-default {
+  border-color: $sbb-red-100;
+  background-color: $sbb-red-100;
+
+  .ui-button-text {
+    color: $sbb-white;
+  }
+
+  &:enabled:hover,
+  &:focus {
+    border-color: $sbb-red-125;
+    background-color: $sbb-red-125;
+  }
+}

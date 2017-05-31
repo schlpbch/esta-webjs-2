@@ -10,7 +10,6 @@
 import {async, TestBed} from '@angular/core/testing';
 import {RouterModule} from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
-import {SimpleNotificationsModule} from 'angular2-notifications';
 
 import {AppComponent} from './app.component';
 import {CoreModule} from './core/core.module';
@@ -29,8 +28,7 @@ describe('AppComponent', () => {
         TestBed.configureTestingModule({
             imports: [
                 CoreModule,
-                RouterModule.forRoot([], {useHash: true}),
-                SimpleNotificationsModule.forRoot()
+                RouterModule.forRoot([], {useHash: true})
             ],
             declarations: [
                 AppComponent
