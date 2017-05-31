@@ -12,13 +12,15 @@ import {Validators, FormControl, FormGroup, FormBuilder} from '@angular/forms';
 import {BreadCrumbService} from './theme-services/breadcrumb.service';
 import {MenuItem, SelectItem} from 'primeng/primeng';
 import {ButtonService} from './theme-services/button.service';
+import {TableService} from './theme-services/table.service';
 
 @Component({
     selector: 'app-theme',
     templateUrl: './theme.component.html',
     providers: [
         BreadCrumbService,
-        ButtonService
+        ButtonService,
+        TableService
     ]
 })
 export class ThemeComponent implements OnInit {
@@ -27,12 +29,15 @@ export class ThemeComponent implements OnInit {
     private breadCrumbItems: Array<MenuItem>;
     private splitButtonItems: Array<MenuItem>;
     private selectButtonItems: Array<SelectItem>;
+    private tableItems: Array<any>;
+    private tableColumns: Array<any>;
     private fb: FormBuilder;
     private userform: FormGroup;
     private genders: SelectItem[];
 
     constructor(private breadCrumbService: BreadCrumbService,
-                private buttonService: ButtonService) {
+                private buttonService: ButtonService,
+                private tableService: TableService) {
         this.fb = new FormBuilder();
     }
 
@@ -40,6 +45,8 @@ export class ThemeComponent implements OnInit {
         this.breadCrumbItems = this.breadCrumbService.getBreadCrumbItems();
         this.splitButtonItems = this.buttonService.getSplitButtonItems();
         this.selectButtonItems = this.buttonService.getSelectButtonItems();
+        this.tableItems = this.tableService.getTableItems();
+        this.tableColumns = this.tableService.getTableColumns();
         this.initUserForm();
     }
 
