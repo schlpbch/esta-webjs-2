@@ -30,7 +30,7 @@ Enter your own data:
       <id>hosted.esta-webjs.snapshots</id>
       <url>...deine URL...</url>
     </snapshotRepository>
-  </distributionManagement>
+</distributionManagement>
 ```
 
 ### package.json
@@ -39,5 +39,5 @@ Enter your own data. Also Version and Authors...
 {"name": "webjs-starterkit"}
 ```
 
-### docker/Dockerfile\
+### docker/Dockerfile
 Change all the names and the point where your artifacts come from 
