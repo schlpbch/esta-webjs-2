@@ -4,53 +4,53 @@
         <a target="_blank" href="{{primengBaseDocumentationUrl}}">the official PrimeNg Docu</a> for more components and
         detailed information
     </p>
-    <hr/>
-    <div>
-        <h1>Breadcrumb
-            <a target="_blank" href="{{primengBaseDocumentationUrl}}/breadcrumb">
-                <small>(Docs)</small>
-            </a>
-        </h1>
+    <p-panel>
+        <p-header>
+            <h1>Breadcrumb
+                <a target="_blank" href="{{primengBaseDocumentationUrl}}/breadcrumb">
+                    <small>(Docs)</small>
+                </a>
+            </h1>
+        </p-header>
         <p-breadcrumb [model]="breadCrumbItems"></p-breadcrumb>
-    </div>
-    <hr/>
-    <div>
-        <h1>Menus
-            <a target="_blank" href="{{primengBaseDocumentationUrl}}/menumodel">
-                <small>(Docs)</small>
-            </a>
-        </h1>
+    </p-panel>
+    <p-panel>
+        <p-header>
+            <h1>Buttons
+                <a target="_blank" href="{{primengBaseDocumentationUrl}}/button">
+                    <small>(Docs)</small>
+                </a>
+            </h1>
+        </p-header>
         <div>
-            <h3>Menu
-                <a target="_blank" href="{{primengBaseDocumentationUrl}}/menu">
+            <button pButton type="button" class="ui-button-primary" label="Primary"></button>
+            <button pButton type="button" class="ui-button-secondary" label="Secondary"></button>
+            <button pButton type="button" class="ui-button-success" label="Success"></button>
+            <button pButton type="button" class="ui-button-info" label="Info"></button>
+            <button pButton type="button" class="ui-button-warning" label="Warning"></button>
+            <button pButton type="button" class="ui-button-danger" label="Danger"></button>
+        </div>
+        <div>
+            <button pButton type="button" label="Click"></button>
+            <button pButton type="button" label="Click"></button>
+            <button pButton type="button" label="Click"></button>
+            <button pButton type="button" label="Disabled"></button>
+        </div>
+        <div>
+            <h3>Split Buttons
+                <a target="_blank" href="{{primengBaseDocumentationUrl}}/splitbutton">
                     <small>(Docs)</small>
                 </a>
             </h3>
-            <p-menu [model]="menuItems"></p-menu>
+            <p-splitButton label="Save" icon="fa-check" [model]="splitButtonItems"></p-splitButton>
         </div>
         <div>
-            <h3>Panel Menu
-                <a target="_blank" href="{{primengBaseDocumentationUrl}}/panelmenu">
+            <h3>Select Buttons
+                <a target="_blank" href="{{primengBaseDocumentationUrl}}/selectbutton">
                     <small>(Docs)</small>
                 </a>
             </h3>
-            <p-panelMenu [model]="panelMenuItems" [style]="{'width':'300px'}"></p-panelMenu>
         </div>
-        <div>
-            <h3>Panel Menu
-                <a target="_blank" href="{{primengBaseDocumentationUrl}}/megamenu">
-                    <small>(Docs)</small>
-                </a>
-            </h3>
-            <p-megaMenu [model]="megaMenuItems"></p-megaMenu>
-        </div>
-        <div>
-            <h3>Tab Menu
-                <a target="_blank" href="{{primengBaseDocumentationUrl}}/tabmenu">
-                    <small>(Docs)</small>
-                </a>
-            </h3>
-            <p-tabMenu [model]="tabMenuItems"></p-tabMenu>
-        </div>
-    </div>
+    </p-panel>
+
 </main>

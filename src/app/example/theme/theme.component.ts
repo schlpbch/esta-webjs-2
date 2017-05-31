@@ -10,35 +10,28 @@
 import {Component, OnInit} from '@angular/core';
 import {BreadCrumbService} from './theme-services/breadcrumb.service';
 import {MenuItem} from 'primeng/primeng';
-import {MenuService} from './theme-services/menu.service';
+import {ButtonService} from './theme-services/button.service';
 
 @Component({
     selector: 'app-theme',
     templateUrl: './theme.component.html',
     providers: [
         BreadCrumbService,
-        MenuService
+        ButtonService
     ]
 })
 export class ThemeComponent implements OnInit {
 
     public primengBaseDocumentationUrl = 'https://www.primefaces.org/primeng/#/';
     private breadCrumbItems: Array<MenuItem>;
-    private menuItems: Array<MenuItem>;
-    private panelMenuItems: Array<MenuItem>;
-    private megaMenuItems: Array<MenuItem>;
-    private tabMenuItems: Array<MenuItem>;
+    private splitButtonItems: Array<MenuItem>;
 
     constructor(private breadCrumbService: BreadCrumbService,
-                private menuService: MenuService) {
+                private buttonService: ButtonService) {
     }
 
     ngOnInit() {
         this.breadCrumbItems = this.breadCrumbService.getBreadCrumbItems();
-        this.menuItems = this.menuService.getMenuItems();
-        this.panelMenuItems = this.menuService.getPanelMenuItems();
-        this.megaMenuItems = this.menuService.getMegaMenuItems();
-        this.tabMenuItems = this.menuService.getTabMenuItems();
+        this.splitButtonItems = this.buttonService.getSplitButtonItems();
     }
-
 }
