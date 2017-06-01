@@ -8,11 +8,8 @@
  * @since 10.05.2017, 2017.
  */
 import {Component, OnInit} from '@angular/core';
-import {Validators, FormControl, FormGroup, FormBuilder} from '@angular/forms';
-import {BreadCrumbService} from './theme-services/breadcrumb.service';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {MenuItem, Message, SelectItem} from 'primeng/primeng';
-import {ButtonService} from './theme-services/button.service';
-import {TableService} from './theme-services/table.service';
 
 @Component({
     selector: 'app-theme',
@@ -21,12 +18,7 @@ import {TableService} from './theme-services/table.service';
         .component-example-group {
             margin-top: 15px;
         }
-    `],
-    providers: [
-        BreadCrumbService,
-        ButtonService,
-        TableService
-    ]
+    `]
 })
 export class ThemeComponent implements OnInit {
 
@@ -41,20 +33,78 @@ export class ThemeComponent implements OnInit {
     private genders: SelectItem[];
     private msgs: Message[] = [];
 
-    constructor(private breadCrumbService: BreadCrumbService,
-                private buttonService: ButtonService,
-                private tableService: TableService) {
+    constructor() {
         this.fb = new FormBuilder();
     }
 
     ngOnInit() {
-        this.breadCrumbItems = this.breadCrumbService.getBreadCrumbItems();
-        this.splitButtonItems = this.buttonService.getSplitButtonItems();
-        this.selectButtonItems = this.buttonService.getSelectButtonItems();
-        this.tableItems = this.tableService.getTableItems();
-        this.tableColumns = this.tableService.getTableColumns();
+        this.breadCrumbItems = this.createBreadCrumbItems();
+        this.splitButtonItems = this.createSplitButtonItems();
+        this.selectButtonItems = this.createSelectButtonItems();
+        this.tableItems = this.createTableItems();
+        this.tableColumns = this.createTableColumns();
         this.initUserForm();
     }
+
+    private createBreadCrumbItems(): Array<MenuItem> {
+        let breadCrumbItems = [];
+        breadCrumbItems.push({label: 'Categories'});
+        breadCrumbItems.push({label: 'Sports'});
+        breadCrumbItems.push({label: 'Football'});
+        breadCrumbItems.push({label: 'Countries'});
+        breadCrumbItems.push({label: 'Spain'});
+        breadCrumbItems.push({label: 'Real Madrid'});
+        breadCrumbItems.push({label: 'Squad'});
+        breadCrumbItems.push({label: 'Sergio Ramos', url: 'https://de.wikipedia.org/wiki/Sergio_Ramos'});
+        return breadCrumbItems;
+    }
+
+    private createSelectButtonItems(): Array<SelectItem> {
+        let cities = [];
+        cities.push({label: 'New York', value: 'New York'});
+        cities.push({label: 'Rome', value: 'Rome'});
+        cities.push({label: 'London', value: 'London'});
+        cities.push({label: 'Istanbul', value: 'Istanbul'});
+        cities.push({label: 'Paris', value: 'Paris'});
+        return cities;
+    }
+
+    private createSplitButtonItems(): Array<MenuItem> {
+        return [
+            {label: 'Update', icon: 'fa-refresh'},
+            {label: 'Delete', icon: 'fa-close'},
+            {label: 'Angular.io', icon: 'fa-link', url: 'http://angular.io'},
+            {label: 'Theming', icon: 'fa-paint-brush'}
+        ];
+    }
+
+    private createTableColumns() {
+        let columns: Array<string> = [];
+        columns.push(this.createColumn('firstname', 'firstname'));
+        columns.push(this.createColumn('lastname', 'lastname'));
+        columns.push(this.createColumn('position', 'position'));
+        columns.push(this.createColumn('club', 'club'));
+        return columns;
+    }
+
+    private createColumn(field: string, header: string): any {
+        return {field, header};
+    }
+
+    private createTableItems(): Array<any> {
+        let players: Array<any> = []
+        players.push(this.createPlayer('Cristiano', 'Ronaldo', 'Striker', 'Real Madrid'));
+        players.push(this.createPlayer('Karmi', 'Benzema', 'Striker', 'Real Madrid'));
+        players.push(this.createPlayer('Sergio', 'Ramos', 'Defender', 'Real Madrid'));
+        players.push(this.createPlayer('Gareth', 'Bale', 'Striker', 'Real Madrid'));
+        players.push(this.createPlayer('Luca', 'Modric', 'Midfielder', 'Real Madrid'));
+        return players;
+    }
+
+    private createPlayer(firstname: string, lastname: string, position: string, club: string) {
+        return {firstname, lastname, position, club};
+    }
+
 
     initUserForm() {
         this.userform = this.fb.group({
