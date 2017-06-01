@@ -8,7 +8,7 @@
     "ng": "ng",
     "start": "ng serve",
     "lint": "ng lint",
-    "test": "ng test --watch=false",
+    "test": "ng test --watch=false --code-coverage",
     "test-selenium": "ng test --progress=false --watch=false --browsers=SeleniumCH,SeleniumFF --code-coverage",
     "e2e": "ng e2e",
     "e2e-selenium": "ng e2e --progress=false --disableHostCheck=true --host=0.0.0.0 --port=$(echo $externalport) --config=protractor.webgrid.conf.js",

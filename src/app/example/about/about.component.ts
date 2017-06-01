@@ -36,7 +36,7 @@ export class AboutComponent implements OnInit {
 
     createMessages() {
         this.messages.push({severity: 'info', summary: 'Info Message', detail: 'PrimeNG rocks'});
-        this.messages.push({severity: 'warn', summary: 'Warn Message', detail: 'There are unsaved changes'});
+        this.messages.push({severity: 'warn', summary: 'Warn Message', detail: 'Sample warning'});
         this.messages.push({severity: 'error', summary: 'Error Message', detail: 'Sample error'});
     }
 
