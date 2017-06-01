@@ -18,10 +18,10 @@ import {Message} from 'primeng/primeng';
     providers: [PostsService]
 })
 export class AboutComponent implements OnInit {
-    private aboutMessage: string;
-    private posts: any[];
-    private postById: any;
-    private messages: Array<Message> = [];
+    aboutMessage: string;
+    posts: any[];
+    postById: any;
+    messages: Array<Message> = [];
 
     constructor(private postsService: PostsService,
                 private translateService: TranslateService) {
