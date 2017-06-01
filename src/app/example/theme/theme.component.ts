@@ -105,8 +105,7 @@ export class ThemeComponent implements OnInit {
         return {firstname, lastname, position, club};
     }
 
-
-    initUserForm() {
+    private initUserForm() {
         this.userform = this.fb.group({
             'firstname': new FormControl('', Validators.required),
             'lastname': new FormControl('', Validators.required),
@@ -114,7 +113,6 @@ export class ThemeComponent implements OnInit {
             'description': new FormControl(''),
             'gender': new FormControl('', Validators.required)
         });
-
         this.genders = [];
         this.genders.push({label: 'Select Gender', value: ''});
         this.genders.push({label: 'Male', value: 'Male'});

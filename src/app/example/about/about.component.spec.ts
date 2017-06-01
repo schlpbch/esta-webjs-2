@@ -12,8 +12,9 @@ import {async, ComponentFixture, inject, TestBed} from '@angular/core/testing';
 import {HttpModule, XHRBackend} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 import {TranslateService} from '@ngx-translate/core';
-import {GrowlModule, ButtonModule, Message} from 'primeng/primeng';
+import {ButtonModule, GrowlModule, Message} from 'primeng/primeng';
 import {Observable} from 'rxjs';
+
 import {AboutComponent} from './about.component';
 import {PostsService} from './posts.service';
 
