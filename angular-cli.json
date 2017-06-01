@@ -22,7 +22,10 @@
         "../node_modules/font-awesome/scss/font-awesome.scss",
         "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.slim.js",
+        "scripts/collapse.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
