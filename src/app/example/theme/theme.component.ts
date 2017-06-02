@@ -119,38 +119,38 @@ export class ThemeComponent implements OnInit {
         this.genders.push({label: 'Female', value: 'Female'});
     }
 
-    onSubmit(formValue): void {
+    public onSubmit(formValue): void {
         console.log('You submitted', formValue);
     }
 
-    showSuccess() {
+    public showSuccess(): void {
         this.msgs = [];
         this.msgs.push({severity: 'success', summary: 'Success Message', detail: 'PrimeNG rocks'});
     }
 
-    showInfo() {
+    public showInfo(): void {
         this.msgs = [];
         this.msgs.push({severity: 'info', summary: 'Info Message', detail: 'PrimeNG rocks'});
     }
 
-    showWarn() {
+    public showWarn(): void {
         this.msgs = [];
         this.msgs.push({severity: 'warn', summary: 'Warn Message', detail: 'There are unsaved changes'});
     }
 
-    showError() {
+    public showError(): void {
         this.msgs = [];
         this.msgs.push({severity: 'error', summary: 'Error Message', detail: 'Validation failed'});
     }
 
-    showMultiple() {
+    public showMultiple(): void {
         this.msgs = [];
         this.msgs.push({severity: 'info', summary: 'Message 1', detail: 'PrimeNG rocks'});
         this.msgs.push({severity: 'info', summary: 'Message 2', detail: 'PrimeUI rocks'});
         this.msgs.push({severity: 'info', summary: 'Message 3', detail: 'PrimeFaces rocks'});
     }
 
-    clear() {
+    public clear(): void {
         this.msgs = [];
     }
 }
